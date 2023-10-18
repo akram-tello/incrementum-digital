@@ -1,0 +1,36 @@
+{% extends "index.twig" %}
+{% block content %}
+		<article class="main-content page-case-studies" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+      			{# {% if title %}<h1 class="page-title">{{title}}</h1>{% endif %} #}
+      				<div class="breadcrumb blogcrumb"><div class="inner"><a href="/our-work/">Our Work</a> <span class="sep">&gt;</span> <h1 class="page-title">Case Studies</h1></div></div>
+            		{# <h2>Case Studies</h2> #}
+      				{%if options.case_studies_headline %}<h2 class="h3">{{ options.case_studies_headline }}</h2>{% endif %}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			<section class="case-studies-index">
+				<div class="inner-wrap">
+					<ul class="case-studies-items">
+	{% for post in posts %}
+						<li>
+						{% if post.get_thumbnail %}
+							<div class="case-image">
+								<a href="{{post.link}}"><img src="{{ post.thumbnail.src }}" alt="{{post.title}}"></a>
+							</div>
+						{% endif %}
+							<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
+							{# <a href="{{post.link}}" class="more-link">Learn More</a></li> #}
+		{# <p>{{post.preview}}</p> #}
+						</li>
+{% endfor %}
+					</ul>
+				</div>
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+			</section>
+			</article>
+
+{% endblock %}

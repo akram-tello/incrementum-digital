@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-content page-analytics" id="post-{{post.ID}}">
+    
+        {% set embed = post.meta('embed') %}
+        
+        <div class="embed-code">
+            {{ embed }}
+        </div>
+    </article>
+{% endblock %}

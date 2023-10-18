@@ -1,0 +1,73 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-content page-portfolio page-our-work" id="post-{{post.ID}}">
+       
+        <section class="page-hero">
+            <div class="inner-wrap" style="height: 200px;">
+                
+            </div>
+            <div class="floaty-blob"></div>
+
+        </section>
+
+
+		<article class="main-content page-podcast" id="post-{{post.ID}}">
+			<section class="page-hero-podcast">
+				<div class="inner-wrap">
+					{% if post.thumbnail.src %}
+					<div class="episode-image">
+						<img src="{{ post.get_field('podcast_image') }}" alt="{{post.thumbnail.alt}}">
+					</div>
+					{% endif %}
+					
+					<div class="hero-text">
+						<h1 class="page-title">{{post.title}}</h1>
+						{{post.content}}
+					</div>
+					
+				</div>
+			</section>
+
+			<section class="episode-list">
+				<div class="inner-wrap">
+					<h3>episodes</h3>
+					<ul class="episodes">
+					{% for episode in podcast %}
+						<li>
+							<a href="{{episode.link}}">
+								<div class="episode-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+									<defs>
+										<linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+										<stop offset="0" stop-color="#4ef2f2"/>
+										<stop offset="1" stop-color="#7727e8"/>
+										</linearGradient>
+									</defs>
+									<path id="Icon_awesome-play-circle" data-name="Icon awesome-play-circle" d="M35.562.563a35,35,0,1,0,35,35A34.994,34.994,0,0,0,35.562.563ZM51.891,38.95,27.052,53.2a3.393,3.393,0,0,1-5.038-2.964V20.885a3.4,3.4,0,0,1,5.038-2.964l24.839,15.1A3.4,3.4,0,0,1,51.891,38.95Z" transform="translate(-0.563 -0.563)" fill="url(#linear-gradient)"/>
+									</svg>
+								</div>
+								<h2 class="h2">
+									{{episode.title}}
+									<span>{{ episode.date('F d, Y') }}</span>
+								</h2>
+								{% if episode.thumbnail.src %}
+									<div class="episode-image">
+										<img src="{{ episode.thumbnail.src('people-profile-hard-crop')|resize(400) }}" alt="{{episode.title}}">
+									</div>
+								{% endif %}
+							</a>
+						</li>
+					{% endfor %}
+					</ul>
+					
+				</div>
+			</section>
+			<section class="banner-cta cols-2">
+				<div class="inner-wrap">
+					<div class="cta-txt"></div>
+					<a href="/podcast" class="btn cta arrow-right">All Episodes</a>
+				</div>
+			</section>
+		</article>
+{% endblock %}

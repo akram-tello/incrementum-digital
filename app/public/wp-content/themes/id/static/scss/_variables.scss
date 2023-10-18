@@ -1,0 +1,62 @@
+// SASS version of global variables
+
+$color-white: #fff;
+$color-black: #000;
+$color-blue-dark: #0d042a;
+$color-purple: #7727e8;
+$color-purple-dark: #42168a;
+$color-teal: #4ef2f2;
+$color-socmed-fb: #43609c;
+$color-socmed-ig: #b9378c;
+$color-socmed-li: #1178b3;
+$color-socmed-tw: #55acee;
+$color-socmed-yt: #f90d1b;
+$base-page-background: $color-blue-dark;
+$base-font-color: $color-blue-dark;
+$base-link-color: $color-blue-dark;
+$trans-duration: 200ms;
+$max-width: 1600px;
+
+%linear-gradient-purp-blue {
+  background: linear-gradient(310deg, #7727e8, #4ef2f2 100%);
+}
+
+// animations bits
+
+@keyframes floaty_blob_01 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translate(-70%, 20%);
+  }
+}
+
+@keyframes floaty_blob_02 {
+  0% {
+    transform: translate(-70%, -10%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+// Media Queries
+
+$mq-620-down: "only screen and (max-width: 620px)";
+$mq-620-up: "only screen and (min-width: 620px)";
+
+$mq-760-down: "only screen and (max-width: 759px)";
+$mq-760-up: "only screen and (min-width: 760px)";
+
+$mq-900-down: "only screen and (max-width: 899px)";
+$mq-900-up: "only screen and (min-width: 900px)";
+
+$mq-1000-down: "only screen and (max-width: 999px)";
+$mq-1000-up: "only screen and (min-width: 1000px)";
+
+$mq-1180-up: "only screen and (min-width: 1180px)";
+
+$mq-1400-up: "only screen and (min-width: 1400px)";
+
+// $mq-1600-up: 'only screen and (min-width: 1600px)';

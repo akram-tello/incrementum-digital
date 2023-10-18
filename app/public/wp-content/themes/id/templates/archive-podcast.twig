@@ -1,0 +1,34 @@
+{% extends "index.twig" %}
+{% block content %}
+		<article class="main-content page-podcast" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+      			{# {% if title %}<h1 class="page-title">{{title}}</h1>{% endif %} #}
+      			<h1 class="page-title">The Podcast</h1>
+            	<h2>All Episodes</h2>
+					</div>
+				</div>
+			</section>
+			<section class="episode-index">
+				<div class="inner-wrap">
+					<ul class="episodes">
+	{% for post in posts %}
+						<li>
+		{% if post.get_thumbnail %}
+						<div class="episode-image">
+							<a href="{{post.link}}"><img src="{{ post.thumbnail.src|resize(400) }}" alt="{{post.title}}"></a>
+						</div>
+		{% endif %}
+		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
+		{# <p>{{post.preview}}</p> #}
+						</li>
+{% endfor %}
+					</ul>
+				</div>
+					<div class="floaty-blob"></div>
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+			</section>
+			</article>
+
+{% endblock %}

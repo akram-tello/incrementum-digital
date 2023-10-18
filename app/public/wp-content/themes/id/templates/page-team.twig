@@ -1,0 +1,64 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-team" id="post-{{post.ID}}">
+    	    {% set hero_block = post.meta('intro_block') %}
+        	{% if hero_block.display_hero_block == 'yes' %}
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<h1 class="page-title">{{ post.title }}</h1>
+						{% if hero_block.intro_headline %}<h2>{{ hero_block.intro_headline }}</h2>{% endif %}
+						{% if hero_block.intro_text %}{{ hero_block.intro_text | wpautop }}{% endif %}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			{% endif %}
+			<section class="team-index">
+				<div class="inner-wrap">
+					<ul class="team-blocks">
+					{% for person in team %}
+						<li>
+						{% if person.thumbnail.src %}
+						<div class="profile-photo">
+							<a href="{{person.link}}"><img src="{{ person.thumbnail.src('people-profile-hard-crop')|resize(400) }}" alt="{{person.title}}"></a>
+						</div>
+						{% endif %}
+						<h2 class="h2"><a href="{{person.link}}">{{person.title}}</a></h2>
+						<h3 class="h3"><a href="{{person.link}}">{{person.position}}</a></h3>
+						{# <a href="{{person.link}}" class="more-link">Learn More</a></li> #}
+						</li>
+					{% endfor %}
+					</ul>
+				</div>
+			</section>
+
+			{% set review_block = post.meta('review_block') %}
+        	{% if review_block.display_block == 'yes' %}
+			<section class="banner-review">
+				<div class="inner-wrap">
+					<div class="wrapper">
+						{% set the_review = review_block.review %}
+						{% if the_review.excerpt %}
+						<div class="review-txt"><p>{{ the_review.excerpt }} &mdash; <a target="blank" class="txt-reviewer" href="{{ the_review.url }}">{{ the_review.review_author }}</a></p></div>
+						{% endif %}
+						<a href="https://www.trustpilot.com/review/incrementumdigital.com" class="logo" target="blank"><img src="{{ site.theme.link }}/static/img/trustpilot.svg"></a>					{# <a href="/about/team/" class="btn cta arrow-right">Meet the Team</a> #}
+					</div>
+				</div>
+			</section>
+            {% endif %}
+
+    	    {% set secondary_block = post.meta('secondary_block') %}
+        	{% if secondary_block.display_secondary_block == 'yes' %}
+			<section class="page-secondary page-content">
+				<div class="inner-wrap">
+					<div class="secondary-text">
+						{% if secondary_block.secondary_headline %}<h2>{{ secondary_block.secondary_headline }}</h2>{% endif %}
+						{% if secondary_block.secondary_text %}{{ secondary_block.secondary_text }}{% endif %}
+					</div>
+				</div>
+			</section>
+			{% endif %}
+		</article>
+{% endblock %}

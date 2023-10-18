@@ -1,0 +1,135 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-content page-ab__testting" id="post-{{post.ID}}">
+        {% set heading = post.meta('heading') %}
+        {% set intro   = post.meta('intro_text') %}
+        {% set cta     = post.meta('cta_button') %}
+        {% set image   = post.meta('featured_image') %}
+        {% set content = post.meta('content') %}
+        <section class="page-header-content">
+            <div class="hero__header">
+                <div class="inner-wrap">
+                    <div class="page-header">
+                        <div class="page-header__content">
+                            <h1>{{ heading }}</h1>
+                            {{ intro }}
+                            
+                            {% if cta is not null %}
+                                <a href="{{ cta['url'] }}" class="cta-button">{{ cta['title'] }}</a>
+                            {% endif %}
+                        </div>
+                        <div class="page-header__image">
+                            <img src="{{ image['url'] }}" alt="{{ image['alt'] }}">
+                        </div>
+                    </div>
+
+                    <div class="floaty-blob"></div>
+                </div>
+            </div>
+
+            <div class="page-header__footer">
+                <div class="page-header__footer__content">
+                    {{ content }}
+                </div>
+                <div class="page-header__footer__image">
+                    <img src="{{ image['url'] }}" alt="{{ image['alt'] }}">
+                </div>
+            </div>
+        </section>
+
+        {% set featured_content = post.meta('featured_content') %}
+        
+        {% if featured_content is not null %}
+        <section class="featured-content">
+            <div class="inner-wrap">
+                <div class="featured">
+                    {% for item in featured_content %}
+                        <div class="featured-item">
+                            <div class="featured-item__content">
+                                <h3>{{ item.title }}</h3>
+                                {{ item.details }}
+                            </div>
+                            <div class="featured-item__image">
+                                <img src="{{ item.photo['url'] }}" alt="{{ item.photo['alt'] }}">
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% set heading = post.meta('cards_heading') %}
+        {% set intro   = post.meta('cards_intro') %}
+        {% set cards   = post.meta('cards') %}
+        <section class="cards-content">
+            <div class="inner-wrap">
+                <h2>{{ heading }}</h2>
+                {{ intro }}
+
+                {% if cards is not null %}
+                <div class="cards">
+                    {% for card in cards %}
+                    <div class="cards-item">
+                        <div class="card-item">
+                            <div class="cards-item__icon">
+                                <div><img src="{{ card.icon['url'] }}" alt="{{ card.icon['alt'] }}"></div>
+                                <div><h3>{{ card.title }}</h3></div>
+                            </div>
+                            <div class="cards-item__title">
+                                {{ card.description }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif  %}
+            </div>
+        </section>
+
+        {% set photo = post.meta('photo') %}
+        {% set description = post.meta('photo_description') %}
+        {% if photo is not null %}
+        <section class="featured-photo">
+            <div class="inner-wrap">
+                <div class="featured-photo__wrapper">
+                    <div class="featured-photo__wrapper--photo">
+                        <img src="{{ photo['url'] }}" alt="{{ photo['alt'] }}">
+                    </div>
+                    <div class="featured-photo__wrapper--content">
+                        {% for item in description  %}
+                            <h3>{{ item.title }}</h3>    
+                            {{ item.description }}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% set checklist_heading = post.meta('checklist_heading') %}
+        {% set checklist = post.meta('checklist') %}
+
+        {% if checklist is not null %}
+        <section class="checklist">
+            <div class="inner-wrap">
+                <h2>{{ checklist_heading }}</h2>
+
+                <div class="checklists">
+                {% for item in checklist %}
+                    <div class="checklists-item">
+                        <div class="checklists-item__content">
+                            <h3>{{ item.title }}</h3>
+                            {{ item.content }}
+                        </div>
+                        <div class="checklists-item__counter"><span><num>{{ loop.index }}</num></span></div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        
+    </article>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+<div class="blog-container {% if post.thumbnail.src %}with-img{% endif %}">
+	<div class="blog-content">
+		<p class="blog-category">{{ post.terms('category') | join(', ') }}</p>
+		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
+	</div>
+	<div class="blog-img">
+		{% if post.thumbnail.src %}
+			<img src="{{post.thumbnail.src}}">
+		{% endif %}
+	</div>
+</div>
+<div class="blog-meta">
+	<div class="blog-date">{{ post.date }}</div>
+	<div class="blog-author">{{ post.author.name }}</div>
+</div>
+{% endblock %}

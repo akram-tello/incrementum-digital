@@ -1,0 +1,52 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-content page-audit page-thankyou-1" id="post-{{post.ID}}">
+        {% set heading = post.meta('intro') %}
+        {% set photo   = post.meta('photo') %}
+        {% set embed   = post.meta('embed_code') %}
+        {% set video   = post.meta('video_embed') %}
+        
+        <section class="audit-header">
+            <div class="floaty-blob"></div>
+            <div class="inner-wrap">
+                <h1>{{ heading }}</h1>
+                <div class="audit">
+                    <div class="audit-item audit-photo">
+                        {% if video is not empty %}
+                            {{ video }}
+                        {% else %}
+                            <img src="{{ photo.url }}" alt="{{ photo.alt }}">
+                        {% endif %}
+                    </div>
+                    <div class="audit-item audit-code">
+                        <div class="audit-code__wrapper">{% filter shortcodes %}{{ embed }}{% endfilter %}</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% set heading = post.meta('heading') %}
+        <section class="home-partners">
+            <div class="inner-wrap">
+                <div class="section-intro">
+                    {% if heading %}<h3 class="subhead">{{ heading }}</h3>{% endif %}
+                </div>
+                {% set badges = post.meta('partners') %}
+                {% if badges %}
+                <ul class="badges">
+                    {% for badge in badges %}
+                        {# {% set badge_image = post.meta('badge') %} #}
+                        <li>
+                            {% if badge.link %}<a href="{{ badge.link }}" target="_blank">{% endif %}
+                                <img src="{{ badge.logo['url'] }}"  alt="{{ badge.logo['alt'] }}">
+                            {% if badge.link %}</a>{% endif %}
+                            
+                            {% if badge.name %}<div class="label">{{ badge.name }}</div>{% endif %}
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </section>
+    </article>
+{% endblock %}

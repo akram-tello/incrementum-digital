@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-careers" id="post-{{post.ID}}">
+    	    {% set hero_block = post.meta('intro_block') %}
+        	{% if hero_block.display_hero_block == 'yes' %}
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<h1 class="page-title">{{ post.title }}</h1>
+						{% if hero_block.intro_headline %}<h2>{{ hero_block.intro_headline }}</h2>{% endif %}
+						{% if hero_block.intro_text %}{{ hero_block.intro_text | wpautop }}{% endif %}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			{% endif %}
+			<section class="page-content">
+				<div class="inner-wrap two-col">
+				<div class="page-guts">{{post.content}}</div>
+				{% if post.get_thumbnail %}
+					<div class="sidebar-image">
+						<img src="{{ post.thumbnail.src }}" alt="{{post.thumbnail.alt}}">
+					</div>
+				{% endif %}
+				</div>
+			</section>
+		</article>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
+		<header class="site-header">
+			<div class="inner">
+				{% block header %}
+				<a href="#" class="js-cart-open added_to_cart wc-forward">
+					<div class="icon-cart">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20.273" height="19.5" viewBox="0 0 20.273 19.5">
+							<path id="cart-r" d="M2,2.25H5.541l1,3H22.273l-5.819,10.5H9.375L7.43,18.343a2.239,2.239,0,0,1,.192.407h8.756a2.25,2.25,0,1,1,0,1.5H7.622a2.249,2.249,0,1,1-1.349-2.864l1.891-2.522L4.459,3.75H2Zm7.541,12h6.03l4.156-7.5H7.041Zm8.959,4.5a.75.75,0,1,0,.75.75A.75.75,0,0,0,18.5,18.75ZM4.75,19.5a.75.75,0,1,1,.75.75A.75.75,0,0,1,4.75,19.5Z" transform="translate(-2 -2.25)" fill="#fff" fill-rule="evenodd"/>
+						</svg>
+						
+					</div>
+				</a>
+				<button aria-label="Menu" class="page-header-menu-button"><span class="burger"><span class="burger-top"></span> <span class="burger-middle"></span> <span class="burger-bottom"></span></span></button>
+				<a href="{{site.url}}" class="logo" rel="home"><span>{{site.name}}</span></a>
+					<nav class="primary">
+						{% include "menu.twig" with {'items': primary_menu.get_items} %}
+					</nav>
+				{% endblock %}
+
+				<a href="//incrementumdigital.com/analytics-dashboard/" class="login-dashboard">Login</a>
+
+				<script >
+					window.addEventListener('message', (e) => {
+						console.log( e.data );
+						if(e.data.message === 'clicked') {
+							const iframe = document.querySelector('#dropdownIframe');
+							iframe.style.height = '220px'
+						}else{
+							const iframe = document.querySelector('#dropdownIframe');
+							iframe.style.height = '50px'  
+						}
+					})
+				</script>
+
+				<iframe id="dropdownIframe" src="https://app.dataowl.incrementumdigital.com/login_logout/" frameborder="0" allowfullscreenn allowtransparency="true" scrolling="no" style="position:absolute; height:50px; width:200px; z-index:2;"></iframe>
+			</div>
+		</header>
+
+		<section id="content" role="main" class="content-wrapper main-content">
+
+
+			{# <div class="wrapper {{sidebar_class}}"> #}
+				{% block content %}
+			{% if title %}<h1>{{title}}</h1>{% endif %}
+					Sorry, no content
+				{% endblock %}
+			{# </div> #}
+			{# {% if sidebar %}
+				<aside class="layout-sidebar">
+					{{sidebar}}
+				</aside>
+			{% endif %} #}
+		</section>
+
+		{% block footer %}
+		    <footer class="site-footer">
+				{% include 'footer.twig' %}
+			</footer>
+		    <script src="{{ site.theme.link }}/static/js/script.js"></script>
+			{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<div class="breadcrumb"><div class="inner"><a href="../">The Podcast</a> <span class="sep">&gt;</span> Ecommerce Mindset
+		</div></div>
+		<article class="single-{{ post.post_type }}-content" id="post-{{ post.ID }}">
+			<section class="article-content episode">
+					{% if post.thumbnail %}
+					<div class="episode-image">
+					<img src="{{ post.thumbnail.src }}" alt="Episode image for {{post.title}}">
+					{% endif %}
+					{% if post.meta('player') %}
+						{% filter shortcodes %}
+						{{post.meta('player')  }}
+						{% endfilter %}
+					{% endif %}
+					</div>
+
+				<div class="episode-copy">
+				<h1 class="page-title">{{post.title}}</h1>
+					{# <h2 class="page-title">{{post.overview_headline}}</h2> #}
+					{{post.content}}
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

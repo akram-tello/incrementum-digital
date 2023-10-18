@@ -1,0 +1,139 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-content page-analytics page-analytics-v2" id="post-{{post.ID}}">
+        <!-- HERO -->
+        {% set hero_subtitle = post.meta('hero_subtitle') %}
+        {% set hero_title    = post.meta('hero_title') %}
+        {% set hero_intro    = post.meta('hero_intro') %}
+        {% set hero_cta1     = post.meta('hero_btn1') %}
+        {% set hero_cta2     = post.meta('hero_btn2') %}
+        {% set hero_bg       = post.meta('hero_background') %}
+
+        <style>
+            .module--hero-text {
+                background-image: url('{{ hero_bg.mobile.url }}');
+            } 
+
+            @media (min-width: 768px) {
+                .module--hero-text {
+                    background-image: url('{{ hero_bg.desktop.url }}');
+                } 
+            }
+        </style>
+        <div class="module module--hero-text">
+            <div class="wrapper">
+                <h4 class="module--subtitle">{{ hero_subtitle }}</h4>
+                <h1 class="module--title">{{ hero_title }}</h1>
+                {{ hero_intro }}
+
+                <div class="ctas">
+                    <a href="{{ hero_cta1.url }}" class="btn btn--purple">{{ hero_cta1.title }}</a>
+                    <a href="{{ hero_cta2.url }}" class="btn btn--black">{{ hero_cta2.title }}</a>
+                </div>
+            </div>
+        </div>
+
+        {% set col_title = post.meta('col_heading') %}
+        {% set col_cta   = post.meta('col_cta') %}
+        {% set columns   = post.meta('col_column') %}
+
+        <div class="module module--column">
+            <div class="wrapper">
+                <h2 class="module--title">{{ col_title }}</h2>
+
+                <div class="columns">
+                    {% for col in columns %}
+                        <div class="columns--item">
+                            <img src="{{ col.image }}" alt="Photo">
+                            <h4>{{ col.title }}</h4>
+                            {{ col.description }}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="cta">
+                    <a href="{{ col_cta.url }}" class="btn btn--black">{{ col_cta.title }}</a>
+                </div>
+            </div>
+        </div>
+
+        {% set text_heading = post.meta('text_heading') %}
+        {% set text_heading = post.meta('text_heading') %}
+        {% set text_intro   = post.meta('text_intro') %}
+        {% set text_content = post.meta('text_content') %}
+        <div class="module module--alternate">
+            <div class="wrapper">
+                <h2 class="module--title">{{ text_heading}}</h2>
+                {{ text_intro  }}
+
+                <div class="alternating_text">
+                    {% for text in text_content %}
+                        <div class="alternating_text--item">
+                            <div class="text--copy">
+                                <h4>{{ text.text_title }}</h4>
+                                {{ text.text_description }}
+                                <a href="{{ text.text_cta.url }}" class="btn btn--purple">{{ text.text_cta.title }}</a>
+                            </div>
+                            <div class="text--image">
+                                <img src="{{ text.text_photo }}" alt="">
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        {% set testi_heading  = post.meta('testi_title') %}
+        {% set testi_intro    = post.meta('testi_intro') %}
+        {% set testimonials   = post.meta('testi_testimonials') %}
+        {% set testi_bg       = post.meta('testi_background') %}
+
+
+        <div class="module module--testimonials">
+            <picture>
+                <source media="(max-width: 767px)" srcset="{{ testi_bg.mobile }}" />
+                <source media="(min-width: 768px)" srcset="{{ testi_bg.desktop }}" />
+                <img src="{{ testi_bg.desktop }}" class="bg" alt="Background" />
+            </picture>
+
+            <div class="wrapper">
+                <h2 class="module--title">{{ testi_heading }}</h2>
+                <p class="intro">{{ testi_intro }}</p>
+
+                <div class="testimonials">
+                    {% for item in testimonials %}
+                        <div class="testimonials--item">
+                            <h3>{{ item.company }}</h3>
+                            {{ item.quote }}
+
+                            <div class="testiomial-meta">
+                                <div class="photo">
+                                    <img src="{{ item.photo }}" alt="">
+                                </div>
+                                <div class="text">
+                                    <p>{{ item.name }}</p>
+                                    <p>{{ item.position }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+    {% set code = post.meta('analytics_shortcode') %}
+
+    {% if code != blank %}
+    <div class="popup-overlay">
+        <div class="popup-wrapper">
+            <a href="#close">&times;</a>
+            <h3>Request a Demo</h3>
+            {{ code|shortcodes }}
+        </div>
+    </div>
+    {% endif %}
+
+{% endblock %}

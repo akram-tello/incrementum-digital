@@ -1,0 +1,63 @@
+        
+
+        {% if options.footer_form_shortcode %}
+        <div class="content-wrapper test">
+            <section class="footer-form" id="footer-form">
+                <div class="inner-wrap">
+                    <h2 class="subhead">{{ options.footer_form_headline }}</h2>
+                    <p>{{ options.footer_form_intro_text }}</p>
+
+                        {{ options.footer_form_shortcode | wpautop | shortcodes }}
+
+                </div>
+            </section>
+        </div>
+        
+        {% endif %}
+        <section class="global-footer test">
+            <div>
+                <a href="{{site.url}}" class="logo">
+                    <img src="{{ site.theme.link }}/static/img/incrementum-digital-logo.svg" alt="Incrementum Digital logo">
+                </a>
+                {% if options.free_audit_link %}
+                <p>
+                    <a href="{{ options.free_audit_link }}" class="cta-button">Request an Audit</a>
+                </p>
+                {% endif %}
+            </div>
+            <div class="socmed-wrap">
+                {% include "menu-socmed.twig" with {'items': social_media_links.get_items} %}
+            </div>
+            <nav class="footer-menu" role="navigation">
+                {% include "menu.twig" with {'items': footer_menu.get_items} %}
+            </nav>
+        </section>
+        <section class="legal">
+            <p class="copyright">&copy; {{"now"|date('Y')}} Incrementum Digital. All rights reserved.</p>
+            <ul class="legal-links" role="navigation">
+                {% include "menu.twig" with {'items': legal_links.get_items} %}
+            </ul>
+        </section>
+
+        {% if options.exit %}
+
+            <div class="exit-overlay">
+                <div class="exit-wrapper">
+                    <a href="#" class="exit-close">&times;</a>
+                    <div class="exit-content">
+                        <div class="exit-photo">
+                            <img src="{{ options.photo.url }}" alt="{{ options.photo.alt }}">
+                        </div>
+                        <div class="exit-text">
+                            <div class="content">
+                                <p>{{ options.heading }}</p>
+                                <h3>{{ options.intro }}</h3>
+                                {% filter shortcodes %}
+                                {{ options.code }}
+                                {% endfilter %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}

@@ -1,0 +1,462 @@
+.page-template-page-analytics-v2 {
+	.footer-form {
+		display: none;
+	}
+	
+	/* .site-header .logo {
+		background: url('https://incrementumdigital.com/wp-content/uploads/id-owl.png') no-repeat;
+		background-size: contain;
+	} */
+	
+	.content-wrapper {
+		max-width: 100%;
+	}
+	
+	.popup-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center; 
+		align-items: center;
+		background: #00000080;
+		z-index: -1;
+		opacity: 0;
+		visibility: hidden;
+		
+		&.open {
+			z-index: 99;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	
+	.popup-wrapper {
+		background: #fff;
+		padding: 30px;
+		max-width: 600px;
+		position: relative;
+		
+		a[href="#close"] {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			font-size: 20px;
+			text-decoration: none;
+		}
+		
+		input {
+			display: block;
+			padding: 10px 20px;
+			box-sizing: border-box;
+			width: 100%;
+			
+			&[type="submit"] {
+				border: 0;
+				background: #7727e8;
+				color: #fff;
+				padding: 15px 35px;
+				font-size: 16px;
+				line-height: 18px;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-decoration: none;
+				border-radius: 30px;
+				display: block;
+				width: 100%;
+				font-family: "HCo Gotham SSm";
+			}
+		}
+		
+		.col { margin: 10px auto; }
+		
+		h3 {
+			margin-top: 0;
+			font-family: "HCo Gotham SSm";
+			text-transform: uppercase;
+		}
+		
+		@media (min-width: 768px) {
+			.row-2 {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 20px;
+				
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+	
+}
+
+.page-analytics,
+.page-analytics-v2 {
+	font-family: "HCo Gotham SSm";
+	
+	.wrapper {
+		max-width: 1080px;
+		margin: auto;
+		padding: 0 30px;
+		box-sizing: border-box;
+	}
+	
+	.module--title {
+		font-size: 28px;
+		line-height: 32px;
+		font-size: 700;
+		
+		@media (min-width: 768px) {
+			font-size: 34px;
+			line-height: 39px;
+		}
+
+	}
+	
+	.btn {
+		display: inline-block;
+		padding: 15px 35px;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-radius: 30px;
+		
+		&--black {
+			color: #fff;
+			background: #000;
+		}
+		
+		&--purple {
+			color: #fff;
+			background: #7727E8;
+		}
+	}
+	
+	p {
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 300;
+		
+		@media (min-width: 768px) {
+			font-size: 18px;
+			line-height: 26px;
+		}
+	}
+	
+	.module--hero-text {
+		background-size: cover;
+		padding: 130px 0 330px;
+		
+		.module--subtitle {
+			text-align: center;
+			font-size: 14px;
+			line-height: 16px;
+			padding: 0;
+			margin: 0 0 10px;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+		
+		.module--title {
+			font-size: 34px;
+			line-height: 39px;
+			padding: 0;
+			margin: 0 0 10px;
+			text-align: center;
+			
+			span {
+				color: #7727E8;
+			}
+		}
+		
+		p {
+			font-size: 18px;
+			line-height: 23px;
+			font-weight: 300;
+			text-align: center;
+			margin: 0 0 15px;
+		}
+		
+		.ctas {
+			text-align: center;
+			margin-top: 30px;
+			
+			.btn {
+				margin-top: 10px;
+			}
+		}
+		
+		@media (min-width: 768px) {
+			padding: 190px 0;
+			
+			.module--subtitle,
+			.module--title,
+			p {
+				text-align: left;
+				max-width: 50%;
+			}
+			
+			.module--title {
+				font-size: 48px;
+				line-height: 55px;
+			}
+			
+			.ctas {	
+				text-align: left;
+			}
+		}
+	}
+	
+	.module--column {
+		background: #7727E8;
+		padding: 30px 0;
+		color: #fff;
+		
+		.module--title {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		
+		.columns {
+			img {
+				margin-bottom: 10px;
+			}
+			
+			h4 {
+				font-size: 26px;
+				line-height: 29px;
+				margin-bottom: 15px;
+				padding: 0;
+				text-transform: none;
+			}
+			
+			p {
+				font-size: 16px;
+				line-height: 26px;
+				font-weight: 300;
+			}
+		}
+		
+		.cta {
+			text-align: center;
+			margin-top: 30px;
+		}
+		
+		@media (min-width: 768px) {
+
+			padding: 40px 0;
+
+			
+			.module--title {
+				max-width: 70%;
+				margin: auto;
+				margin-bottom: 35px;
+			}
+			
+			.columns {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 65px;
+				
+				h4 {
+					font-size: 28px;
+					line-height: 32px;
+				}
+			}
+		}
+	}
+	
+	.module--alternate {
+		padding: 60px 0;
+		text-align: center;
+		
+		.module--title {
+			text-align: center;
+			margin-top: 0;
+		}
+		
+		p {
+			font-weight: 300;
+		}
+		
+		@media (min-width: 768px) {
+			padding: 50px;
+		}
+		
+		.alternating_text {
+			margin-top: 30px;
+			
+			h4,
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			
+			&--item {
+				text-align: left;
+				margin-bottom: 30px;
+				
+				&:last-child { margin-bottom: 0; }
+				
+				h4 {
+					font-size: 26px;
+					line-height: 29px;
+					font-weight: 700;
+					margin-bottom: 20px;
+					color: #7727E8;
+				}
+				
+				p {
+					margin-bottom: 10px;
+				}
+				
+				.text--copy {
+					margin-bottom: 20px;
+				}
+			}
+			
+			@media (min-width: 768px) {
+				&--item {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 115px;
+					
+					&:nth-child(even) {
+						flex-direction: row-reverse;
+					}
+					
+					&:last-child {
+						margin-bottom: 0;
+					}
+					
+					h4 {
+						font-size: 28px;
+						line-height: 32px;
+					}
+					
+					
+					.text--copy,
+					.text--image {
+						flex: 0 0 48%;
+					}
+				}
+			}
+		}
+	}
+	
+	.module--testimonials {
+		position: relative;
+		padding: 60px 0;
+		text-align: center;
+		
+		.bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+		.wrapper {
+			position: relative;
+			z-index: 1;
+		}
+		
+		.module--title {
+			margin-bottom: 10px;
+		}
+		
+		p.intro {
+			font-size: 20px;
+			line-height: 26px;
+			margin: 0 0 30px;
+		}
+		
+		.testimonials {
+			&--item {
+				background: #000;
+				color: #fff;
+				padding: 40px 20px;
+				text-align: left;
+				margin-bottom: 20px;
+				border-radius: 4px;
+				
+				h3 {
+					margin: 0 0 20px;
+					font-size: 24px;
+					line-height: 29px;
+				}
+				
+				
+				.testiomial-meta {
+					display: flex;
+					
+					.photo {
+						width: 45px;
+						margin-right: 10px;
+						
+						img {
+							border-radius: 100%;
+						}
+					}
+					
+					.text {
+						p {
+							font-size: 14px;
+							line-height: 26px;
+							font-weight: 700;
+							margin: 0;
+						}
+						
+						p + p {
+							font-size: 12px;
+							line-height: 13px;
+							font-weight: 300;
+						}
+					}
+				}
+			}
+		}
+		
+		@media (min-width: 768px) {
+			p.intro {
+				margin-bottom: 65px;
+				font-size: 20px;
+				line-height: 26px;
+			}
+			
+			.testimonials {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-column-gap: 30px;
+				grid-row-gap: 40px;
+				
+				&--item {
+					margin: 0;
+					padding: 45px 40px;
+					
+					h3 {
+						font-size: 28px;
+						line-height: 32px;
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.global-footer .logo + p {
+		text-align: center;
+	}
+
+	.site-footer .socmed { font-size: 1rem; }
+}

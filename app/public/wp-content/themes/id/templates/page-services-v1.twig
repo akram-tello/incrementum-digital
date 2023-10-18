@@ -1,0 +1,99 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-services" id="post-{{post.ID}}">
+    	    {% set hero_block = post.meta('hero') %}
+			<section class="page-hero" {% if hero_block.background_image %}style="background-image: url('{{ Image(hero_block.background_image).src }}');background-size:cover;background-position:50% 50%;"{% endif %}>
+				<div class="inner-wrap{% if post.thumbnail %} two-col{% endif %}">
+					{% if post.thumbnail %}
+					<div class="hero-img">
+						{# <img src="{{ Image(hero_block.feature_image).src }}" alt="{{ Image(hero_block.feature_image).alt }}"> #}
+						<img src="{{ Image(post.thumbnail).src }}" alt="{{ Image(post.thumbnail).alt }}">
+					</div>
+					{% endif %}
+					<div class="hero-text">
+						<h1 class="page-title">{{ post.title }}</h1>
+						{% if hero_block.headline %}<h2>{{ hero_block.headline }}</h2>{% endif %}
+						{% if hero_block.text %}{{ hero_block.text | wpautop }}{% endif %}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			<section class="page-content">
+				<div class="inner-wrap{% if post.content_image_feature %} two-col{% endif %}">
+					{% if post.content_image_feature %}
+					<div class="feature-img">
+						<img src="{{ Image(post.content_image_feature).src }}" alt="{{ Image(post.content_image_feature).alt }}">
+						{# <img src="{{ Image(post.thumbnail).src }}" alt="{{ Image(post.thumbnail).alt }}"> #}
+					</div>
+					{% endif %}
+					<div class="content">
+					{{post.content}}
+					{# {% set services = post.services %} #}
+					{% set services = post.meta('services') %}
+					{% if services %}
+					<div class="services">
+						<ul class="services-list">
+						{% for service in services %}
+							<li>
+								<a href="{{ service.link }}">
+								<div class="icon-wrap"><div class="icon">{% if service.icon %}<img src="{{ Image(service.icon).src }}" alt="{{ service.name }} icon">{% endif %}</div></div>
+								<div class="label">{{ service.name}}</div></a>
+							</li>
+						{% endfor %}
+						</ul>
+					</div>
+					{% endif %}
+					</div>
+				</div>
+			</section>
+
+        	{% if post.display_cta_block == 'yes' %}
+    	    {% set cta = post.meta('cta') %}
+			<section class="banner-cta">
+				<div class="inner-wrap">
+					{% if cta.headline_text %}<div class="cta-txt"><h3>{{ cta.headline_text }}</h3></div>{% endif %}
+					{# {% if cta.link_text and cta.link_url %}<a href="{{ cta.link_url }}" class="btn cta arrow-right">{{ cta.link_text }}</a>{% endif %} #}
+					{% if cta.link_text %}<a class="btn cta arrow-right" data-tf-popup="ZG859CA4" data-tf-size="70" data-tf-iframe-props="title=Incrementum Lead Gen">{{ cta.link_text }}</a>
+					<script src="//embed.typeform.com/next/embed.js"></script>{% endif %}
+				</div>
+			</section>
+			{% endif %}
+
+			{% set cases = post.meta('featured_case_studies') %}
+			{% if cases %}
+			<section class="featured-case-studies">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						<h3 class="subhead">Case Studies</h3>
+					</div>
+					<div class="cases">
+							<ul>
+							{% for case in cases %}
+								<li>
+								{% if case.cases.get_thumbnail %}
+									<div class="case-image">
+										<a href="{{case.cases.link}}"><img src="{{  case.cases.thumbnail.src }}" alt="{{ case.cases.title}}"></a>
+									</div>
+								{% endif %}
+									<h4><a href="{{ case.cases.link }}">{{ case.cases.title }} </a></h4>
+								</li>
+							{% endfor %}
+							</ul>
+					</div>
+				</div>
+			</section>
+			{% endif %}
+
+
+
+			<section class="banner-review">
+				<div class="inner-wrap">
+				<div class="wrapper">
+					<div class="review-txt"><p>I really am speechless. I signed up with Incrementum in July 2020 after managing Amazon ppc solo for a while. It quite literally was the BEST decision I've ever made for my business. &mdash; <a target="blank" class="txt-reviewer" href="https://www.trustpilot.com/reviews/5fe120df755dc107e0cae5cc">Leon</a></p></div>
+					<a href="https://www.trustpilot.com/reviews/5fe120df755dc107e0cae5cc" class="logo" target="blank"><img src="{{ site.theme.link }}/static/img/trustpilot.svg"></a>					{# <a href="/about/team/" class="btn cta arrow-right">Meet the Team</a> #}
+				</div>
+				</div>
+			</section>
+		</article>
+{% endblock %}

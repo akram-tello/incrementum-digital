@@ -1,0 +1,38 @@
+{# {% extends "base.twig" %}
+
+{% block content %}
+	<h1>Boom!</h1>
+	<p>{{ qux }}</p>
+	{% for post in posts %}
+		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+	{% endfor %}
+	
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %} #}
+{% extends "index.twig" %}
+{% block content %}
+		<article class="main-content page-blog test" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+      					<h1 class="page-title">Blog</h1>
+            			<h2>Blog</h2>
+						<?php echo do_shortcode("[ivory-search id="4137" title="AJAX Search Form"]"); ?>						
+					</div>
+				</div>
+			</section>
+			<section class="post-index">
+				<div class="inner-wrap">
+				<nav class="blog-menu">
+					{% include "menu.twig" with {'items': primary_menu.get_items} %}
+				</nav>
+	{% for post in posts %}
+		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+	{% endfor %}
+				</div>
+					<div class="floaty-blob"></div>
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+			</section>
+			</article>
+
+{% endblock %}

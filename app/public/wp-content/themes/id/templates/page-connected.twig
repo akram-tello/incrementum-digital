@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-content page-portfolio page-our-work" id="post-{{post.ID}}">
+        {% set heading = post.meta('heading') %}
+        {% set cta     = post.meta('cta_button') %}
+        {% set photo   = post.meta('photo') %}
+
+        <section class="page-hero">
+            <div class="inner-wrap">
+                <div class="hero">
+                    <div class="hero-text">                        
+                        <h2>{{ heading }}</h2> 
+
+                        {% if cta %}
+                            <a href="{{ cta.link }}" class="cta-button">{{ cta.title }}</a>
+                        {% endif %}
+                    </div><div class="hero-image">
+                        <img src="https://incrementumdigital.com/wp-content/uploads/transparent.png" alt="filler">
+                        <img src="{{ photo.url }}" alt="{{ photo.alt }}" class="bg">
+                    </div>
+                </div>
+            </div>
+            <div class="floaty-blob"></div>
+
+        </section>
+
+       
+
+        <section class="page-content page-connected">
+            <div class="inner-wrap">
+                {{post.content}}
+            </div>
+        </section>
+
+    </article>
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-our-work" id="post-{{post.ID}}">
+    	    {% set hero_block = post.meta('intro_block') %}
+        	{% if hero_block.display_hero_block == 'yes' %}
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<h1 class="page-title">{{ post.title }}</h1>
+						{% if hero_block.intro_headline %}<h2>{{ hero_block.intro_headline }}</h2>{% endif %}
+						{% if hero_block.intro_text %}{{ hero_block.intro_text | wpautop }}{% endif %}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			{% endif %}
+			{% set case_studies = post.meta('case_studies') %}
+			<section class="featured-case-studies">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						{% if case_studies.headline %}<h3 class="subhead">{{ case_studies.headline }}</h3>{% endif %}
+						{% if case_studies.copy %}<div class="intro">{{  case_studies.copy }}</div>{% endif %}
+					</div>
+					{% set cases = case_studies.featured_case_studies %}
+					{% if cases %}
+					<div class="cases">
+							<ul>
+							{% for case in cases %}
+								<li>
+								{% if case.cases.get_thumbnail %}
+									<div class="case-image">
+										<a href="{{case.cases.link}}"><img src="{{  case.cases.thumbnail.src }}" alt="{{ case.cases.title}}"></a>
+									</div>
+								{% endif %}
+									<h4><a href="{{ case.cases.link }}">{{ case.cases.title }} </a></h4>
+								</li>
+							{% endfor %}
+							</ul>
+					</div>
+				{% endif %}
+				</div>
+			</section>
+
+			{% set review_block = post.meta('review_block') %}
+        	{% if review_block.display_block == 'yes' %}
+			<section class="banner-review">
+				<div class="inner-wrap">
+					<div class="wrapper">
+						{% set the_review = review_block.review %}
+						{% if the_review.excerpt %}
+						<div class="review-txt"><p>{{ the_review.excerpt }} &mdash; <a target="blank" class="txt-reviewer" href="{{ the_review.url }}">{{ the_review.review_author }}</a></p></div>
+						{% endif %}
+						<a href="https://www.trustpilot.com/review/incrementumdigital.com" class="logo" target="blank"><img src="{{ site.theme.link }}/static/img/trustpilot.svg"></a>					{# <a href="/about/team/" class="btn cta arrow-right">Meet the Team</a> #}
+					</div>
+				</div>
+			</section>
+            {% endif %}
+
+
+			{% set featured_work = post.meta('featured_work') %}
+			<section class="featured-work">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						{% if featured_work.headline %}<h3 class="subhead">{{ featured_work.headline }}</h3>{% endif %}
+						{% if featured_work.copy %}<div class="intro">{{  featured_work.copy }}</div>{% endif %}
+					</div>
+					{% set portfolio_items = featured_work.featured_portfolio_items %}
+					{% if portfolio_items %}
+					<div class="portfolio-items">
+							<ul>
+							{% for item in portfolio_items %}
+								<li>
+								{% if  item.items.preview_image %}
+												<div class="portfolio-image">
+													<a href="{{ item.items.link }}"><img src="{{ Image( item.items.preview_image).src | resize(400, 300)  }}" alt="{{ item.items.title }}"></a>
+												</div>
+								{% endif %}
+								<h4 class="h2"><a href="{{ item.items.link }}">{{ item.items.title }}</a></h4>
+								</li>
+							{% endfor %}
+							</ul>
+					</div>
+				{% endif %}
+					<a href="{{ featured_work.link_to_portfolio }}" class="more-link">{{ featured_work.link_to_portfolio_text }}</a>
+				</div>
+			</section>
+			{# <section class="banner-cta cols-2">
+				<div class="inner-wrap">
+					<div class="cta-txt"></div>
+					<a href="{{ featured_work.link_to_portfolio }}" class="btn cta arrow-right">{{ featured_work.link_to_portfolio_text }}</a>
+				</div>
+			</section> #}
+		</article>
+{% endblock %}

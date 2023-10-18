@@ -1,0 +1,100 @@
+.page-blog .page-hero {
+    padding-top: 15%;
+}
+.page-blog .hero-text {
+    flex-direction: column;
+    gap: 0;
+}
+.page-blog .post-index .inner-wrap {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 30px !important;
+}
+.page-blog .blog-content h2.h2 {
+    font-size: 16px;
+}
+.page-blog article.tease-post {
+    min-height: 280px;
+}
+.blog-container.with-img {
+    flex-direction: column;
+}
+.blog-container.with-img .blog-content, .blog-container.with-img .blog-img {
+	width: 100%;
+}
+.blog-container.with-img .blog-img {
+    padding-bottom: 10%;
+    padding-top: 0;
+}
+.blog-meta {
+    font-size: 13px;
+}
+.single-post .page-hero .inner-wrap {
+    flex-direction: column;
+}
+.single-post .main-content article .page-hero {
+    padding-top: 23%;
+}
+.single-post .page-hero .featured-image {
+    padding: 2rem 2rem 0;
+    width: 100%;
+}
+.single-post .page-hero .hero-text {
+    width: 100%;
+    padding: 0 2rem 4rem;
+}
+.single-post .page-hero .inner-wrap .article-h1 {
+    font-size: 1.5rem !important;
+    padding: 0;
+}
+.single-post a.btn.btn--outline.btn--back-arrow {
+    font-size: 10px;
+}
+.single-post section.article-content.blog-post {
+    padding: 0 10% 5%;
+}
+.single-post .blog-post .article-h1 {
+    font-size: 1.4rem !important;
+}
+.single-post .article-guts * {
+    font-size: 0.9rem !important;
+}
+.single-post .article-body iframe, .single-post .article-body object, .single-post .article-body img, .single-post .article-body video {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.page-blog .page-hero .inner-wrap {
+    padding: 2% 5% !important;
+}
+.page-blog .hero-text .is-form-style.is-form-style-3 input.is-search-input {
+    border-right: 1px solid #263e88 !important;
+}
+.login-dashboard {
+    right: 70px;
+}
+.single-post .post-index .inner-wrap {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+.single-post .blog-meta {
+    font-size: 12px;
+}
+.single-post .post-index .blog-content h2 {
+    line-height: 20px;
+}
+.single-post .post-index h3 {
+    font-size: 24px;
+    line-height: 27px;
+    margin: 30px 0;
+}
+.single-post .page-hero .inner-wrap.no-img .hero-text {
+    width: 100%;
+}
+.page-blog article.tease-post:first-child {
+    grid-column: span 1;
+}
+.page-template-page-portfolio img[alt="filler"] {
+    display: none;
+}
+.page-template-page-portfolio .hero-image {
+    margin-top: 50px;
+}

@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-media" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<h1 class="page-title">{{post.title}}</h1>
+						{{post.content}}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			{% set media = post.meta('media') %}
+			<section class="media-index">
+				<div class="inner-wrap">
+					<ul class="media-mentions">
+					{% for mention in media %}
+						<li>
+						<h4 class="h3">{{ mention.outlet }}</h3>
+						<h4 class="date">{{ mention.date }}</h3>
+						{% if mention.image %}
+						<div class="mention-image">
+							<a href="{{mention.url}}" target="_blank"><img src="{{ Image(mention.image).src | resize(400, 300) }}" alt="{{ Image(mention.image).alt}}"></a>
+						</div>
+						{% endif %}
+						<h3 class="h2"><a href="{{ mention.url }}" target="_blank">{{ mention.headline }}</a></h3>
+						</li>
+					{% endfor %}
+					</ul>
+				</div>
+			</section>
+		</article>
+{% endblock %}

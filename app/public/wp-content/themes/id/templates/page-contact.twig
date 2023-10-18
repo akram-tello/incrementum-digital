@@ -1,0 +1,31 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-contact" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<h1 class="page-title">{{post.title}}</h1>
+						{{post.content}}
+					</div>
+				</div>
+					<div class="floaty-blob"></div>
+			</section>
+			<section class="contact-content">
+				<div class="inner-wrap">
+					<div class="contact-copy">
+						<p>We look forward to speaking with you!</p>
+            <div class="socmed-wrap">
+                {% include "menu-socmed.twig" with {'items': social_media_links.get_items} %}
+            </div>
+
+					</div>
+					<div class="contact-form">
+						{% filter shortcodes %}
+							[contact-form-7 id="168" html_id="gen-contact-form" title="General Contact"]
+						{% endfilter %}
+					</div>
+				</div>
+			</section>
+		</article>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-resources" id="post-{{post.ID}}">
+    	    {% set hero_block = post.meta('intro_block') %}
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<h1 class="page-title">{{ post.title }}</h1>
+						{% if hero_block.intro_headline %}<h2>{{ hero_block.intro_headline }}</h2>{% endif %}
+						{% if hero_block.intro_text %}{{ hero_block.intro_text | wpautop }}{% endif %}
+					</div>
+				</div>
+			<div class="floaty-blob"></div>
+			</section>
+			{% set blog_posts = post.meta('blog_posts') %}
+			<section class="featured-posts">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						{% if blog_posts.headline %}<h3 class="subhead">{{ blog_posts.headline }}</h3>{% endif %}
+						{% if blog_posts.copy %}<div class="intro">{{  blog_posts.copy }}</div>{% endif %}
+					</div>
+					<div class="posts">
+	{# {% set blogposts = fn('get_posts') %} #}
+						{% for blogpost in posts %}
+						<article class="tease" id="tease-{{blogpost.ID}}">
+							{% if blogpost.get_thumbnail %}
+								<a href="{{blogpost.link}}"><img src="{{blogpost.thumbnail.src}}" /></a>
+							{% endif %}
+							<h2 class="h2"><a href="{{blogpost.link}}">{{blogpost.title}}</a></h2>
+							<p>{{blogpost.preview}}</p>
+						</article>
+						{% endfor %}
+					</div>
+				</div>
+					{# <a href="/resources/blog/" class="more-link">Go to the blog</a> #}
+			</section>
+			<section class="banner-cta cols-2">
+				<div class="inner-wrap">
+					<div class="cta-txt"></div>
+					<a href="/resources/blog/" class="btn cta arrow-right">Go to the blog</a>
+				</div>
+			</section>
+			<section class="featured-podcast">
+				<div class="inner-wrap">
+					<div class="podcast">
+						<div class="recent-episode">
+							<div class="copy">
+							<h3>The Podcast</h3>
+							<h2>Ecommerce Mindset</h2>
+							{% for episode in podcast %}
+							{% if loop.first %}
+								<p class="episode-title"><a href="{{episode.link}}">{{episode.title}}</a></p>
+									{% if episode.meta('player') %}
+									{% filter shortcodes %}
+									{{episode.meta('player')  }}
+									{% endfilter %}
+								{% endif %}
+								<a href="{{episode.link}}" class="more-link">Episode Details</a></li>
+							{% endif %}
+							</div>
+						{% if episode.thumbnail.src %}
+						<div class="episode-image">
+							<img src="{{ episode.thumbnail.src('people-profile-hard-crop') }}" alt="{{episode.thumbnail.alt}}">
+						</div>
+						{% endif %}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+					{# <a href="/resources/blog/" class="more-link">Go to the blog</a> #}
+			</section>
+			<section class="banner-cta cols-2">
+				<div class="inner-wrap">
+					<div class="cta-txt"></div>
+					<a href="/resources/the-podcast/" class="btn cta arrow-right">All Podcast Episodes</a>
+				</div>
+			</section>
+		</article>
+{% endblock %}

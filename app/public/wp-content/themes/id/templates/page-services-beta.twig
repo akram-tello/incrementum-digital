@@ -1,0 +1,83 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-services page-services-beta" id="post-{{post.ID}}">
+    	    {% set hero_block = post.meta('hero') %}
+			<section class="page-hero">
+				<div class="inner-wrap{% if post.thumbnail %} two-col{% endif %}">
+					{% if hero_block.hero_image %}
+					<div class="hero-img">
+						<img src="{{ Image(hero_block.hero_image).src }}" alt="{{ Image(hero_block.hero_image).alt }}">
+					</div>
+					{% endif %}
+				</div>
+			</section>
+
+			{% set intro = post.meta('intro') %}
+        	{% if intro.display_block == 'yes' %}
+			<section class="service-intro" {% if intro.background_image %}style="background-image: url('{{ Image(intro.background_image).src }}');background-size:contain;background-repeat:no-repeat;background-position:center bottom;"{% endif %}>
+				<div class="inner-wrap">
+					{% if intro.headline %}<h2>{{ intro.headline }}</h2>{% endif %}
+					<div class="intro-text">
+						{% if intro.text %}{{  intro.text | wpautop }}{% endif %}
+					</div>
+				</div>
+			</section>
+			{% endif %}
+
+			{% set services_block = post.meta('services_block') %}
+        	{% if services_block.display_block == 'yes' %}
+			<section class="services-block">
+				<div class="inner-wrap">
+					{% set services = services_block.services %}
+					{% if services %}
+					<ul class="services">
+						{% for service in services %}
+							<li>
+							<img src="{{ Image(service.service_image).src }}"  alt="{{  Image(service.service_image).alt }}">
+							<div class="text">
+								{% if service.headline %}<h3>{{ service.headline }}</h3>{% endif %}
+								{% if service.text %}{{  service.text | wpautop }}{% endif %}
+								{# {% if service.cta_button_text %}
+								<div class="cta">
+									<a href="{{ service.cta_button_url }}" class="cta-button">{{ service.cta_button_text }}</a>
+								</div>
+								{% endif %} #}
+								{% if service.display_cta_btn == 'yes' %}
+								<div class="cta">
+									{% if service.cta_button_type == 'button' %}{% if service.cta_button_text %}<a href="{{ service.cta_button_url }}" class="cta-button">{{ service.cta_button_text }}</a>{% endif %}{% endif %}
+									{% if service.cta_button_type == 'typeform' %}<a class="cta-button" {{ options.typeform_button }}>{{ service.cta_button_text }}</a>{% endif %}
+								</div>
+								{% endif %}
+							</div>
+							{% if service.cta_button_type == 'typeform' %}
+								{{ options.typeform_script_embed }}
+							{% endif %}
+						{% endfor %}
+					</ul>
+					{% endif %}
+				</div>
+			</section>
+			{% endif %}
+
+			{% set contact_form = post.meta('contact_form') %}
+        	{% if contact_form.display_block == 'yes' %}
+
+			<section class="footer-form">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						<h3 class="subhead">{{ options.footer_form_headline }}</h3>
+						{% if options.footer_form_intro_text %}<p class="copy">{{ options.footer_form_intro_text }}</p>{% endif %}
+					</div>
+					<div class="form">
+						{% filter shortcodes %}
+							{# [contact-form-7 id="168" html_id="gen-contact-form" title="General Contact"] #}
+						   {{ options.footer_form_shortcode }}
+						{% endfilter %}
+					</div>
+				</div>
+			</section>
+            {% endif %}
+
+		</article>
+{% endblock %}

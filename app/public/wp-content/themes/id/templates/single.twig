@@ -1,0 +1,163 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{# <div class="content-wrapper"> #}
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			{# <img src="{{ post.thumbnail.src|resize(1200, 300) }}"> #}
+			<section class="page-hero">
+				<div class="inner-wrap {% if post.thumbnail.src %}with-img{% else %}no-img{% endif %}">
+					{% if post.thumbnail.src %}
+						<div class="featured-image">
+							<img src="{{ post.thumbnail.src }}" alt="{{post.thumbnail.alt}}">
+						</div>
+					{% endif %}
+					<div class="hero-text">
+						<p class="blog-category">{{ post.terms('category') | join(', ') }}</p>
+						{# <div class="breadcrumb blogcrumb"><div class="inner"><a href="/resources/">Resources</a> <span class="sep">&gt;</span> <a href="/resources/blog/">Blog</a></div></div> #}
+						<h1 class="article-h1">{{ post.title }}</h1>
+            			{# <h2>The latest from Incrementum Digital</h2> #}
+						<div class="blog-meta">
+							<div class="blog-date">{{ post.date }}</div>
+							<div class="blog-author">{{ post.author.name }}</div>
+						</div>
+						<a href="/blog/" class="btn btn--outline btn--back-arrow">Back to Articles</a>
+					</div>					
+				</div>
+				{# <div class="floaty-blob"></div> #}
+			</section>
+			<section class="article-content blog-post">
+				<div class="inner-wrap">
+					<h1 class="article-h1">{{ post.title }}</h1>
+					{# <a href="{{ post.link }}">{{ _e('edit') }}</a> #}
+					{# <div class="post-meta">
+						<p class="blog-author">
+							<span>By</span> {{ post.author.name }}
+						</p>
+						<p class="date"><time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time></p>
+					</div> #}
+					<div class="article-body">
+						<div class="article-guts">
+						{{post.content}}
+						</div>
+						{# {{sidebar}} #}
+					</div>
+				</div>
+			</section>
+
+			<!-- comment box -->
+			{# <section class="comment-box">
+				<!-- comments -->
+				<div class="comments">
+				    {% if post.comments %}
+					<h3> Join the Conversation:<br>Share Your Thoughts and Connect with the Community </h3>
+					{% endif %}
+					{% if post.comment_status == "closed" %}
+						<p> comments for this post are closed </p>
+					{% else %}
+						<!-- comment form -->
+						{% include "comment-form.twig" %}
+					{% endif %}
+					
+					{% if post.comments %}
+					{% for cmt in post.comments %}
+					    {% include "comment.twig" with {comment:cmt} %}
+					{% endfor %}
+				    {% endif %}
+				</div>
+			</section> #}
+			
+			<section class="post-index">
+				<h3>Other Articles You May Enjoy</h3>
+				<div class="inner-wrap">
+				<article class="tease tease-post" id="tease-3991">
+					<div class="blog-container with-img">
+						<div class="blog-content">
+							<p class="blog-category">Performance Growth</p>
+							<h2 class="h2">
+							<a href="/blog/performance-growth/understanding-search-query-performance-sqp-on-amazon-a-comprehensive-guide/">Understanding Search Query Performance (SQP) on Amazon: A Comprehensive Guide</a>
+							</h2>
+						</div>
+						<div class="blog-img">
+							<img src="/wp-content/uploads/Download-Mansours-SUPA-Template-2.png">
+						</div>
+					</div>
+					<div class="blog-meta">
+						<div class="blog-date">May 2, 2023</div>
+						<div class="blog-author">Kate Bray</div>
+					</div>
+				</article>
+				<article class="tease tease-post" id="tease-2828">
+					<div class="blog-container with-img">
+						<div class="blog-content">
+							<p class="blog-category">Uncategorized</p>
+							<h2 class="h2"><a href="/blog/uncategorized/amazon-trends-and-predictions-what-worked-and-what-can-be-expected/">Amazon Trends and Predictions: What Worked, and What Can Be Expected</a></h2>
+						</div>
+						<div class="blog-img">
+							<img src="/wp-content/uploads/unnamed-8.jpg">
+						</div>
+					</div>
+					<div class="blog-meta">
+						<div class="blog-date">October 5, 2022</div>
+						<div class="blog-author">taibacteam@gmail.com</div>
+					</div>
+				</article>
+				<article class="tease tease-post" id="tease-367">
+					<div class="blog-container with-img">
+						<div class="blog-content">
+							<p class="blog-category">Advertising</p>
+							<h2 class="h2"><a href="/blog/advertising/should-i-allocate-budget-towards-branded-terms/">Should I Allocate Budget Towards Branded Terms?</a></h2>
+						</div>
+						<div class="blog-img">
+							<img src="/wp-content/uploads/4.jpg">
+						</div>
+					</div>
+					<div class="blog-meta">
+						<div class="blog-date">December 2, 2021</div>
+						<div class="blog-author">Incrementum Digital</div>
+					</div>
+					</article>
+					<article class="tease tease-post" id="tease-361">
+						<div class="blog-container with-img">
+							<div class="blog-content">
+								<p class="blog-category">Advertising</p>
+								<h2 class="h2"><a href="/blog/advertising/amazon-sponsored-ads-the-complete-guide/">Amazon Sponsored Ads: The Complete Guide</a></h2>
+							</div>
+							<div class="blog-img">
+								<img src="/wp-content/uploads/3.jpg">
+							</div>
+						</div>
+						<div class="blog-meta">
+							<div class="blog-date">December 2, 2021</div>
+							<div class="blog-author">Incrementum Digital</div>
+						</div>
+					</article>
+					<article class="tease tease-post" id="tease-359">
+						<div class="blog-container with-img">
+							<div class="blog-content">
+								<p class="blog-category">Performance Growth</p>
+								<h2 class="h2"><a href="/blog/performance-growth/amazon-uk-partner-awards-submission/">Amazon UK Partner Awards Submission</a></h2>
+							</div>
+							<div class="blog-img">
+								<img src="/wp-content/uploads/7.jpg">
+							</div>
+						</div>
+						<div class="blog-meta">
+							<div class="blog-date">December 1, 2021</div>
+							<div class="blog-author">Incrementum Digital</div>
+						</div>
+					</article>
+				</div>
+			</section>
+			<section class="footer-form test" id="footer-form">
+                <div class="inner-wrap">
+                    <h2 class="subhead">Growth Engine Solutions that Help You Boost Your Return on Investment</h2>
+                    <p><i>How can we help?</i><br><br>Fill out the form to get started</p>
+					{% filter shortcodes %} 
+                        [contact-form-7 id="981" title="Footer Contact Form"]
+					{% endfilter %}	
+                </div>
+			</section>
+			
+		</article>
+	{# </div><!-- /content-wrapper --> #}
+{% endblock %}

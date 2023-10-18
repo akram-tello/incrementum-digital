@@ -1,0 +1,12 @@
+## Team
+
+Graphic Design and UX
+Dev + Deployment
+Jason D. 
+DROPKICK
+https://dropkick.design
+@dropkickdesign
+
+## Site
+
+Software: Built on WordPress with [Timber](http://upstatement.com/timber) by Upstatement with lots of SASS 

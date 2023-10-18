@@ -1,0 +1,114 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-content page-portfolio page-our-work" id="post-{{post.ID}}">
+        {% set heading = post.meta('heading') %}
+        {% set cta     = post.meta('cta_button') %}
+        {% set photo   = post.meta('photo') %}
+        <section class="page-hero">
+            <div class="inner-wrap">
+                <div class="hero">
+                    <div class="hero-text">
+                        <div class="breadcrumb blogcrumb"> 
+                            <div class="inner">
+                                <a href="/portfolio/">Our Work</a> 
+                                <span class="sep">&gt;</span> 
+                                <h1 class="page-title">Portfolio</h1>
+                            </div>
+                        </div>
+                        
+                        <h2>{{ heading }}</h2> 
+
+                        {% if cta %}
+                            <a href="{{ cta.url }}" class="cta-button">{{ cta.title }}</a>
+                        {% endif %}
+                    </div><div class="hero-image">
+                        <img src="https://incrementumdigital.com/wp-content/uploads/transparent.png" alt="filler">
+                        <img src="{{ photo.url }}" alt="{{ photo.alt }}" class="bg">
+                    </div>
+                </div>
+            </div>
+            <div class="floaty-blob"></div>
+
+        </section>
+
+        <section class="category-toggle">
+            <div class="inner-wrap">
+                <div class="category-toggle-control">
+                    {% for cat in work_cat %}
+                        <a href="#{{ cat.slug }}">{{ cat.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>        
+
+        <section class="work-listing">
+            <div class="inner-wrap">
+                {% for cat in work_cat %}
+                    <div class="work-listing__item {% if loop.index == 1 %} show {% endif %}" id="{{ cat.slug }}">
+                        <div class="work-listing__heading">
+                            <div><h3>{{ cat.name }}</h3></div>
+                            {% if cat.posts|length > 3 %}
+                            <div><a href="#" class="js-see-all">View All</a></div>
+                            {% endif %}
+                        </div>
+
+                        <div class="work-posts">
+                            {% for entry in cat.posts %}
+                                <div class="work-posts__item">
+                                    <a 
+                                        class="fake-link"
+                                        {% if entry.get_field('video') %}
+                                            href="{{ entry.get_field('video_url') }}"
+                                            data-fancybox="group"
+                                            data-width="640" data-height="360"
+                                        {% else %}
+                                            href="{{ entry.get_field('preview_image').url }}"
+                                            data-fancybox="group-{{ cat.slug }}"
+                                        {% endif %}
+                                        data-headline="{{ not entry.get_field('overview_headline') ? entry.title : entry.get_field('overview_headline') }}"
+                                        data-excerpt="{{ entry.get_field('preview_excerpt')|escape }}"
+                                        data-content="{{ entry.get_field('work_content')|escape }}"
+                                    >Order Now</a>
+                   
+                                    <div class="work-posts__wrap">
+                                        <div class="work-posts__thumb">
+                                            <img src="{{ entry.get_field('preview_image').url }}" alt="{{ entry.title }}">
+                                        </div>
+                                        <div class="work-posts__content">
+                                            <h4>{{ entry.title }}</h4>
+                                            {{ entry.get_field('preview_excerpt') }}
+                                        </div>
+                                        <div class="work-posts__cta">
+                                            <a href="{{ entry.permalink }}" class="cta-button cta-purple">See More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <div class="work-cta">
+            <h3>{{ post.get_field('cta_text') }}</h3>
+            {% if post.get_field('cta_link') %}
+                <a href="{{ post.get_field('cta_link').url }}" class="cta-button">{{ post.get_field('cta_link').title }}</a>
+            {% endif %}
+        </div>
+    </article>
+
+    <div class="overlay-work">
+        <div class="overlay-wrapper">
+            <div class="overlay-content">
+                <a href="#" class="js-overlay-close overlay-close">&times;</a>
+                <div class="overlay-html">
+                    <h2 class="js-headline"></h2>
+                    <div class="js-excerpt"></div>
+                    <div class="js-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

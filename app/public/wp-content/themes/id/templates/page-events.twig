@@ -1,0 +1,46 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-events" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<h1 class="page-title">{{post.title}}</h1>
+						{{post.content | wpautop }}
+					</div>
+				</div>
+			</section>
+			<section class="events-index">
+				<div class="inner-wrap">
+					{% set events = post.meta('events') %}
+					{% if events %}
+					<h2 >Upcoming Events</h2>
+					<ul class="events">
+						{% for event in events %}
+{% if event.date|date('U') > 'now'|date('U') %}
+							<li>
+							{% if event.date %}<p class="date">{{ event.date }}</p>{% endif %}
+							{% if event.name %}<h3 class="name">{% if event.url %}<a href="{{ event.url }}">{% endif %}{{ event.name }}{% if event.url %}</a>{% endif %}</h3>{% endif %}
+							{% if event.description %}<p class="description">{{ event.description }}</p>{% endif %}
+							</li>
+{% endif %}
+						{% endfor %}
+					</ul>
+					<h2 >Past Events</h2>
+					<ul class="events">
+						{% for event in events %}
+{% if event.date|date('U') < 'now'|date('U') %}
+							<li>
+							{% if event.date %}<p class="date">{{ event.date }}</p>{% endif %}
+							{% if event.name %}<h3 class="name">{% if event.url %}<a href="{{ event.url }}">{% endif %}{{ event.name }}{% if event.url %}</a>{% endif %}</h3>{% endif %}
+							{% if event.description %}<p class="description">{{ event.description }}</p>{% endif %}
+							</li>
+{% endif %}
+						{% endfor %}
+					</ul>
+					{% endif %}
+				</div>
+			</section>
+					<div class="floaty-blob"></div>
+		</article>
+{% endblock %}

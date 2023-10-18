@@ -1,0 +1,33 @@
+{# This file demonstrates using most of the index.twig template and modifying 
+   just a small part. See `search.twig` for an example of another approach #}
+
+{# {% extends "index.twig" %}
+
+{% block content %}
+  <h1> {{ title }}</h1>
+  {{ parent() }}
+{% endblock %} #}
+
+{% extends "index.twig" %}
+{% block content %}
+		<article class="main-content archive" id="post-{{post.ID}}">
+			<section class="category-posts-index">
+				<div class="inner-wrap">
+		<div class="breadcrumb blogcrumb"><div class="inner"><a href="/resources/">Resources</a> <span class="sep">&gt;</span> <a href="/resources/blog/">Blog</a> <span class="sep">&gt;</span> <h1 class="page-title">{{ title }}</h1></div></div>
+          {# <h1 class="page-title"> {{ title }}</h1> #}
+					<ul class="category-posts-items">
+	{% for post in posts %}
+						<li>
+		{% include ['tease-post.twig', 'tease.twig'] %}
+		{# <h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2> #}
+		{# <p>{{post.preview}}</p> #}
+						</li>
+{% endfor %}
+					</ul>
+				</div>
+					<div class="floaty-blob"></div>
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+			</section>
+			</article>
+
+{% endblock %}

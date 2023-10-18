@@ -1,0 +1,35 @@
+{% extends "index.twig" %}
+{% block content %}
+		<article class="main-content page-portfolio" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+      			{# {% if title %}<h1 class="page-title">{{title}}</h1>{% endif %} #}
+      				<div class="breadcrumb blogcrumb"><div class="inner"><a href="/our-work/">Our Work</a> <span class="sep">&gt;</span> <h1 class="page-title">Portfolio</h1></div></div>
+      				{# <h1 class="page-title">Our Work</h1> #}
+            		{# <h2>Portfolio</h2> #}
+					</div>
+				</div>
+					<div class="floaty-blob"></div>
+			</section>
+			<section class="portfolio-index">
+				<div class="inner-wrap">
+					<ul class="portfolio-items">
+	{% for post in posts %}
+						<li>
+		{% if post.preview_image %}
+						<div class="portfolio-image">
+							<a href="{{post.link}}"><img src="{{ Image(post.preview_image).src | resize(400, 300)  }}" alt="{{post.title}}"></a>
+						</div>
+		{% endif %}
+		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
+		{# <p>{{post.preview}}</p> #}
+						</li>
+{% endfor %}
+					</ul>
+				</div>
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+			</section>
+			</article>
+
+{% endblock %}

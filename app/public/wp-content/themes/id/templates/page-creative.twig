@@ -1,0 +1,184 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-content page-portfolio page-our-work page-services" id="post-{{post.ID}}">
+        {% set heading = post.meta('heading') %}
+        {% set intro   = post.meta('intro_') %}
+        {% set cta     = post.meta('cta_button') %}
+        {% set photo   = post.meta('photo') %}
+        
+
+        <section class="page-hero">
+            <div class="inner-wrap two-col">
+                <div class="hero-img">
+                    <img src="{{ photo.url }}" alt="{{ photo.alt }}">
+                </div>
+                <div class="hero-text">
+                    <h2>{{ heading }}</h2>
+                    {{ intro }}
+
+                    <div class="cta">
+                        <a href="{{ cta.url }}" class="cta-button">{{ cta.title }}</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="floaty-blob"></div>
+        
+        </section>
+
+        {% set steps = post.meta('steps') %}
+        <section class="steps">
+            <div class="steps-wrapper">
+                <div class="steps-toggle">
+                    <span>How it Works </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g id="help" transform="translate(24) rotate(90)">
+                                <path id="Path_26220" data-name="Path 26220" d="M0,0H24V24H0Z" fill="none"/>
+                                <circle id="Ellipse_118" data-name="Ellipse 118" cx="9" cy="9" r="9" transform="translate(3 3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                <line id="Line_35" data-name="Line 35" y2="0.01" transform="translate(12 17)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                <path id="Path_26221" data-name="Path 26221" d="M2,6.529a1.5,1.5,0,0,1,1-1.5,2.6,2.6,0,1,0-3-4" transform="translate(10 6.971)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="steps-item">
+                    {% for step in steps %}
+                    <div class="steps-step">
+                        <div class="steps-icon"><img src="{{ step.icon.url }}" alt="{{ step.icon.alt }}"></div>
+                        <div class="steps-text">
+                            <h4>{{ step.title }}</h4>
+                            {{ step.description }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        {% set heading  = post.meta('product_heading') %}
+        {% set products = post.meta('featured_products') %}
+        <section class="product-list featured-products">
+            <div class="inner-wrap">
+                <div class="section-title"><h3>{{ heading }}</h3></div>
+
+                <div class="products">
+
+                    {% for product in products %}
+                        <div class="products--item">
+                            {% set ribbon = product.get_field('ribbon', product.id ) %}
+
+                            {% if ribbon %}<span class="ribbon">{{ ribbon }}</span>{% endif %}
+                            
+                            <div>
+                            <img src="{{ product.thumbnail.src }}" alt="Product Thumbnail">
+                            <h4>{{ product.title }}</h4>
+                            {% set prod = fn('wc_get_product', product.id) %}
+                            
+                            <div class="products--item__description">
+                                <h2>{{ currency }}{{ prod.price }}</h2>
+                                {{ prod.short_description | wpautop }}
+                            </div>
+                            </div>
+
+                            <form class="cart" method="post" enctype="multipart/form-data">
+
+                                <input type="hidden" name="add-to-cart" value="{{ product.id }}">
+                                <input type="hidden" name="quantity" value="1">
+
+                                <button type="submit" class="single_add_to_cart_button button alt cta-button cta-purple"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                            </form>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        {% set heading  = post.meta('others_heading') %}
+        {% set others   = post.meta('other_products') %}
+
+        <section class="product-list other-products">
+            <div class="inner-wrap">
+                <div class="section-title"><h3>{{ heading }}</h3></div>
+
+                <div class="products">
+                    {% for product in Post(post.other_products) %}
+                        <div class="products--item">
+                            <div>
+                                <div class="product-header">    
+                                    {% if product.thumbnail %}
+                                        <div><img src="{{ product.thumbnail.src }}" alt="Product Thumbnail"></div>
+                                    {% endif %}
+                                    <div><h5>{{ product.title }}</h5></div>
+                                </div>
+
+                                <div class="other-products__detail">
+                                    {% set prod = fn('wc_get_product', product.id) %}
+                                    <h2>{{ currency }}{{ prod.price }}</h2>
+                                    {{ prod.short_description | wpautop }}
+                                </div>
+                            </div>
+
+                            
+                            <form class="cart" method="post" enctype="multipart/form-data">
+                                <label>Quantity</label>
+                                <div class="quantity">
+                                    <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Quantity" class="js-qty input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric">
+                                    <a href="#" class="btn btn-minus js-minus">&minus;</a>
+                                    <a href="#" class="btn btn-plus js-plus">&plus;</a>
+                                </div>
+
+                                <input type="hidden" name="add-to-cart" value="{{ product.id }}">
+
+                                <button type="submit" class="single_add_to_cart_button button alt cta-button cta-purple"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                            </form>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                {% set cta_text = post.meta('cta_text') %}
+                {% set cta = post.meta('cta_link') %}
+                <div style="text-align: center" class="cta-block">
+                    <p>{{ cta_text }}</p>
+                    <a href="{{ cta.url }}" class="cta-button cta-purple">{{ cta.title }}</a>
+                </div>
+            </div>
+        </section>
+
+        {% set faq = post.meta('faq') %}
+        {% set heading = post.meta('faq_heading') %}
+        {% set foot    = post.meta('footnote') %}
+
+        <section class="faq">
+            <div class="inner-wrap">
+                <h2>{{ heading }}</h3>
+
+                {% if faq %}
+                    <div class="faqs">
+                        {% for item in faq %}
+                            <div class="faqs--item">
+                                <h4 class="faqs-question">
+                                    {{ item.question }}
+                                    <span>
+                                        <i>&plus;</i>
+                                        <i>&minus;</i>
+                                    </span>
+                                </h4>
+                                <div class="faqs-answer">
+                                    {{ item.answer }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <p>{{ foot }}</p>
+            </div>
+
+            <div class="floaty-blob"></div>
+        </section>
+
+    </article>
+{% endblock %}

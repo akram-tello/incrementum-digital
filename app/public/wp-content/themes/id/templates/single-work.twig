@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-work" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<div class="breadcrumb"><div class="inner"><a href="/our-work/">Our Work</a>  <span class="sep">&gt;</span> <a href="../">
+						Portfolio</a>
+						{# <span class="sep">&gt;</span> {{ post.title }} #}
+						</div>
+						</div>
+						<h1 class="page-title">{{post.title}}</h1>
+						{% if post.overview_headline or post.preview_excerpt %}
+						{% if post.overview_headline %}
+							<h2>{{post.overview_headline}}</h2>
+						{% endif %}
+						{% if post.preview_excerpt %}
+						<div class="intro-copy">
+							{{ post.preview_excerpt | wpautop }}
+						</div>
+						{% endif %}
+						{% endif %}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			<section class="article-content portfolio-item-content">
+				<div class="inner-wrap">
+				{{ post.meta('work_content') }}</li>
+				</div>
+			</section>
+		</article>
+{% endblock %}

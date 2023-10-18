@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+    	    {% set hero_block = post.meta('intro_block') %}
+        	{% if hero_block.display_hero_block == 'yes' %}
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<h1 class="page-title">{{ post.title }}</h1>
+						{% if hero_block.intro_headline %}<h2>{{ hero_block.intro_headline }}</h2>{% endif %}
+						{% if hero_block.intro_text %}{{ hero_block.intro_text | wpautop }}{% endif %}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			{% endif %}
+			<section class="page-content">
+				<div class="inner-wrap">
+					{{post.content}}
+				</div>
+			</section>
+        	{% if post.display_cta_block == 'yes' %}
+    	    {% set cta = post.meta('cta') %}
+			<section class="banner-cta cols-2">
+				<div class="inner-wrap">
+					<div class="cta-txt">{% if cta.headline_text %}<h3>{{ cta.headline_text }}</h3>{% endif %}</div>
+					{# {% if cta.link_text and cta.link_url %}<a href="{{ cta.link_url }}" class="btn cta arrow-right">{{ cta.link_text }}</a>{% endif %} #}
+					{% if cta.link_text %}<a class="btn cta arrow-right" data-tf-popup="ZG859CA4" data-tf-size="70" data-tf-iframe-props="title=Incrementum Lead Gen">{{ cta.link_text }}</a>
+					<script src="//embed.typeform.com/next/embed.js"></script>{% endif %}
+				</div>
+			</section>
+			{% endif %}
+		</article>
+{% endblock %}

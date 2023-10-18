@@ -1,0 +1,58 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-podcast" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<h1 class="page-title">{{post.title}}</h1>
+						{{post.content}}
+						<div class="recent-episode">
+							<h3>The Latest Episode</h3>
+							{% for episode in podcast %}
+							{% if loop.first %}
+								<p class="episode-title"><a href="{{episode.link}}">{{episode.title}}</a></p>
+									{% if episode.meta('player') %}
+									{% filter shortcodes %}
+									{{episode.meta('player')  }}
+									{% endfilter %}
+								{% endif %}
+								<a href="{{episode.link}}" class="more-link">Episode Details</a></li>
+							{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+					{% if post.thumbnail.src %}
+					<div class="episode-image">
+						<img src="{{ post.thumbnail.src('people-profile-hard-crop') }}" alt="{{post.thumbnail.alt}}">
+					</div>
+					{% endif %}
+				</div>
+			</section>
+			<section class="episode-index">
+				<div class="inner-wrap">
+					<ul class="episodes">
+					{% for episode in podcast %}
+						<li>
+						{% if episode.thumbnail.src %}
+						<div class="episode-image">
+							<a href="{{episode.link}}"><img src="{{ episode.thumbnail.src('people-profile-hard-crop')|resize(400) }}" alt="{{episode.title}}"></a>
+						</div>
+						{% endif %}
+						<h2 class="h2"><a href="{{episode.link}}">{{episode.title}}</a></h2>
+						{# <a href="{{episode.link}}" class="more-link">Episode</a></li> #}
+						</li>
+					{% endfor %}
+					</ul>
+					
+				</div>
+					<div class="floaty-blob"></div>
+			</section>
+			<section class="banner-cta cols-2">
+				<div class="inner-wrap">
+					<div class="cta-txt"></div>
+					<a href="/podcast" class="btn cta arrow-right">All Episodes</a>
+				</div>
+			</section>
+		</article>
+{% endblock %}

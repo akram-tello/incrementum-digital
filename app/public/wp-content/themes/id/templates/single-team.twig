@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<div class="breadcrumb"><div class="inner"><a href="/about/team/">{{post.post_type|capitalize}}</a> <span class="sep">&gt;</span> {{ post.title }}</div></div>
+		<article class="single-{{ post.post_type }}-content" id="post-{{ post.ID }}">
+			{# <img src="{{ post.thumbnail.src|resize(1200, 300) }}"> #}
+			<section class="article-image">
+				<div class="profile-photo">
+					<img src="{{ post.thumbnail.src | resize(800) }}" alt="portrait of {{post.title}}">
+				</div>
+			</section>
+			<section class="article-content">
+				<h1 class="name">{{ post.title }}</h1>
+				<h3 class="position"> {{post.meta('position')}}</h3>
+				{# <a href="{{ post.link }}">{{ _e('edit') }}</a> #}
+				<div class="team-bio">
+					 {{post.meta('bio')}}
+				</div>
+	    	    {% set core_value = post.meta('core_value') %}
+				{% if post.comments %}
+				<div class="team-core-value">
+					 {{core_value }}
+				</div>
+				{% endif %}
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

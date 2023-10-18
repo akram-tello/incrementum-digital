@@ -1,0 +1,93 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content page-work" id="post-{{post.ID}}">
+			<section class="page-hero">
+				<div class="inner-wrap">
+					<div class="hero-text">
+						<div class="breadcrumb"><div class="inner"> <a href="/our-work/">Our Work</a> <span class="sep">&gt;</span> <a href="../">
+						Case Studies</a>
+						{# <span class="sep">&gt;</span> {{ post.title }} #}
+						</div></div>
+						<h1 class="page-title">{{post.title}}</h1>
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			<section class="article-content case-challenge">
+				<div class="inner-wrap">
+						{% if post.overview_headline or post.overview %}
+						{% if post.overview %}
+						<div class="overview">
+							<div class="intro-copy">
+								{% if post.overview_headline %}
+									<h2>{{post.overview_headline}}</h2>
+								{% endif %}
+								{{ post.overview | wpautop }}
+							</div>
+							{% set overview_image = post.meta('overview_image') %}
+							{% if overview_image %}
+							<div class="overview-image">
+								<img src="{{ Image(overview_image).src | resize(600)  }}"  alt="{{ overview_image.alt }}">
+							</div>
+							{% endif %}
+							</div>
+						{% endif %}
+						{% endif %}
+					<h2>{{post.challenge_headline}}</h2>
+					{% set challenges = post.meta('challenges') %}
+					{% if challenges %}
+					<div class="challenge-copy">
+						<ul class="challenges">
+							{% for item in challenges %}
+								{% set challenge_image = item.challenge_image %}
+								<li>{% if item.challenge_image %}<img src="{{ Image(challenge_image).src | resize(200)  }}"  alt="{{ challenge_image.alt }}">{% endif %}
+								{{ item.challenge_text | wpautop }}</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% set challenge_text = post.meta('challenge_text') %}
+						{% if challenge_text %}
+						<div class="challenge-text">
+								{{ challenge_text | wpautop }}
+						</div>
+						{% endif %}
+					</div>
+				</div>
+			</section>
+			<section class="article-content case-approach">
+				<div class="inner-wrap">
+				<h2>{{post.approach_headline}}</h2>
+	    	    {% set steps = post.meta('approach_steps') %}
+				{% if steps %}
+				<ul class="steps">
+					{% for item in steps %}
+						<li><h3>{{ item.heading }}</h3>
+						{{ item.description | wpautop }}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+				</div>
+			</section>
+			<section class="article-content case-results">
+				<div class="inner-wrap">
+				<h2>{{post.results_headline}}</h2>
+	    	    {% set results = post.meta('results') %}
+				{% if results %}
+				<ul class="results">
+					{% for item in results %}
+						<li><img src="{{ site.theme.link }}/static/img/checkmark-circ.svg" class="checkmark">
+						{{ item.result_text | wpautop }}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+  			    {% set results_feature_image = post.meta('results_feature_image') %}
+				{% if results_feature_image %}
+				<div class="feature-image">
+					<img src="{{ Image(results_feature_image).src }}"  alt="{{ results_feature_image.alt }}">
+				</div>
+				{% endif %}
+				</div>
+			</section>
+		</article>
+{% endblock %}

@@ -1,0 +1,351 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="main-content post-type-{{post.post_type}}" id="post-{{post.ID}}">
+
+    	    {% set hero_block = post.meta('hero_block') %}
+
+        	{% if hero_block.display_hero_block == 'yes' %}
+			<section class="home-hero">
+					<div class="inner-wrap">
+						<div class="copy-wrap">
+						{% if hero_block.headline %}<h1 class="section-headline">{{ hero_block.headline }}</h1>{% endif %}
+						{% if hero_block.subhead %}<p class="section-subhead">{{ hero_block.subhead }}</p>{% endif %}
+        				{% if hero_block.display_cta_btn == 'yes' %}
+        				{% if hero_block.cta_button_type == 'button' %}{% if hero_block.cta_btn_text %}<a href="{{ hero_block.cta_btn_url }}" class="cta-button">{{ hero_block.cta_btn_text }}</a>{% endif %}{% endif %}
+        				{% if hero_block.cta_button_type == 'typeform' %}
+						
+						{% if options.full_code != blank %}
+							{{ options.full_code }}
+						{% else %}
+							<a class="cta-button" {{ options.typeform_button }}>{{ hero_block.cta_btn_text }}</a>
+						{% endif %}
+
+						 {# {{ options.typeform_script_embed }} #}
+						{# {% if hero_block.cta_btn_text %}<a href="{{ hero_block.cta_btn_url }}" class="cta-button">{{ hero_block.cta_btn_text }}</a>{% endif %}{% endif %} #}
+						{% endif %}
+						{% endif %}
+						</div>
+							{% if hero_block.video_file and hero_block.video_poster_image %}
+							<div class="video-container">
+							<video controls preload="none" poster="{{ Image(hero_block.video_poster_image).src }}">
+								<source src="{{ hero_block.video_file.url }}" type="video/mp4">
+							</video>
+							{% endif %}
+							</div>
+						</div>
+						{# <div class="vid-preview">
+							<a href="#"><img src="{{ site.theme.link }}/static/img/fpo-video-poster.png"></a>
+						</div> #}
+					<div class="floaty-blob"></div>
+			</section>
+	        {% endif %}
+
+			{# <section class="banner-cta cols-2">
+				<div class="inner-wrap">
+					<div class="cta-txt"><h3>Connect with our team of experts</h3></div>
+					<a class="btn cta arrow-right" data-tf-popup="ZG859CA4" data-tf-size="70" data-tf-iframe-props="title=Incrementum Lead Gen">Get Started</a>
+					<script src="//embed.typeform.com/next/embed.js"></script>
+				</div>
+			</section> #}
+
+			{% set services_sec = post.meta('services') %}
+        	{% if services_sec.display_services_block == 'yes' %}
+
+			<section class="services-grid">
+					<div class="inner-wrap">
+					<div class="section-intro">
+						{# <h3 class="subhead">Services</h3> #}
+						{% if services_sec.headline %}<h2 class="h2">{{ services_sec.headline }}</h2>{% endif %}
+						{% if services_sec.copy %}<div class="intro">{{  services_sec.copy | wpautop }}</div>{% endif %}
+					</div>
+					{% set services = services_sec.services %}
+					{% if services %}
+					<div class="services">
+							<ul class="services-list">
+							{% for service in services %}
+								<li>
+									<a href="{{ service.link }}">
+									<div class="icon-wrap"><div class="icon">{% if service.icon %}<img src="{{ Image(service.icon).src }}" alt="{{ service.name }} icon">{% endif %}</div></div>
+									<div class="label">{{ service.name}}</div></a>
+								</li>
+							{% endfor %}
+							</ul>
+					</div>
+					{% if services_sec.display_cta_btn == 'yes' %}
+					<div class="cta">
+        				{% if services_sec.display_cta_btn == 'yes' %}
+        				{% if services_sec.cta_button_type == 'button' %}{% if services_sec.cta_btn_text %}<a href="{{ services_sec.cta_btn_url }}" class="cta-button">{{ services_sec.cta_btn_text }}</a>{% endif %}{% endif %}
+        				{% if services_sec.cta_button_type == 'typeform' %}
+
+						{% if options.full_code != blank %}
+							{{ options.full_code }}
+						{% else %}
+							<a class="cta-button" {{ options.typeform_button }}>{{ services_sec.cta_btn_text }}</a>
+						{% endif %}
+						 {# {{ options.typeform_script_embed }} #}
+						{% endif %}
+						{% endif %}
+					{# {% if services_sec.cta_btn_text %}<a href="{{ services_sec.cta_button_url }}" class="cta-button">{{ services_sec.cta_btn_text }}</a>{% endif %} #}
+					</div>
+					{% endif %}
+					{% endif %}
+					<div class="floaty-blob"></div>
+				</div>
+			</section>
+	        {% endif %}
+
+			{% set testimonials = post.meta('testimonials') %}
+        	{% if testimonials.display_block == 'yes' %}
+			<section class="home-video-testimonials">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						{% if testimonials.headline %}<h3 class="subhead">{{ testimonials.headline }}</h3>{% endif %}
+						{% if testimonials.copy %}<div class="intro">{{  testimonials.copy | wpautop }}</div>{% endif %}
+						{# <p>The brands we work with aren’t just clients - they’re our partners. Here’s some of their stories:</p> #}
+					</div>
+					<div class="videos">
+						<ul>
+						{% set vid_testimonials = testimonials.video_testimonials %}
+						{% for testimonial in vid_testimonials %}
+							<li>
+								<div class="video-container">
+            {% if testimonial.local_or_youtube == 'local' %}
+            <video controls preload="none" {% if intro_block.video_poster_image %}poster="{{ Image(intro_block.video_poster_image).src }}{% endif %}">
+                <source src="{{ intro_block.video_file.url }}" type="video/mp4">
+            </video>
+            {% endif %}
+            {% if testimonial.local_or_youtube == 'youtube' %}
+                <iframe src="https://www.youtube.com/embed/{{ testimonial.youtube_video_id }}?showinfo=1&modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+								</div>
+								<h4 class="name">{{ testimonial.name }}</h4>
+								<h4 class="title_co">{{ testimonial.position_company }}</h4>
+							</li>
+						{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</section>
+	        {% endif %}
+
+			{# <section class="banner-cta cols-2">
+				<div class="inner-wrap">
+					<div class="cta-txt"></div>
+					<a href="/case-studies" class="btn cta arrow-right">See More Case Studies</a>
+				</div>
+			</section> #}
+
+			{% set review = post.meta('review_1') %}
+        	{% if review.display_review == 'yes' %}
+			<section class="banner-review">
+				<div class="inner-wrap">
+					<div class="wrapper">
+						{% set the_review = review.review %}
+						{% if the_review.excerpt %}
+						<div class="review-txt"><p>{{ the_review.excerpt }} &mdash; <a target="blank" class="txt-reviewer" href="{{ the_review.url }}">{{ the_review.review_author }}</a></p></div>
+						{% endif %}
+						<a href="https://www.trustpilot.com/review/incrementumdigital.com" class="logo" target="blank"><img src="{{ site.theme.link }}/static/img/trustpilot.svg"></a>					{# <a href="/about/team/" class="btn cta arrow-right">Meet the Team</a> #}
+					{# <a href="/about/team/" class="btn cta arrow-right">Meet the Team</a> #}
+					</div>
+				</div>
+			</section>
+            {% endif %}
+
+			{% set partners = post.meta('partners') %}
+        	{% if partners.display_block == 'yes' %}
+			<section class="home-partners">
+				<div class="inner-wrap">
+				<div class="section-intro">
+					{% if partners.headline %}<h3 class="subhead">{{ partners.headline }}</h3>{% endif %}
+					{% if partners.copy %}<div class="intro">{{  partners.copy | wpautop }}</div>{% endif %}
+					{# <p>The brands we work with aren’t just clients - they’re our partners. Here’s some of their stories:</p> #}
+				</div>
+				{% set badges = partners.partner_badges %}
+				{% if badges %}
+				<ul class="badges">
+					{% for badge in badges %}
+		  			    {# {% set badge_image = post.meta('badge') %} #}
+						<li>
+						{% if badge.badge_url %}<a href="{{ badge.badge_url }}" target="_blank">{% endif %}
+						<img src="{{ Image(badge.badge).src }}"  alt="{{ badge.badge.alt }}">
+						{% if badge.badge_url %}</a>{% endif %}
+						{% if badge.copy %}<div class="label">{{ badge.copy }}</div>{% endif %}
+					{% endfor %}
+				</ul>
+				{% endif %}
+				</div>
+			</section>
+            {% endif %}
+
+			{% set how_we_help = post.meta('how_we_help') %}
+        	{% if how_we_help.display_block == 'yes' %}
+			<section class="home-how-we-help">
+				<div class="inner-wrap">
+				<div class="section-intro">
+					{% if how_we_help.headline %}<h3 class="subhead">{{ how_we_help.headline }}</h3>{% endif %}
+				</div>
+				{% set hows = how_we_help.how_items %}
+				{% if hows %}
+				<ul class="hows">
+					{% for how in hows %}
+		  			    {# {% set badge_image = post.meta('badge') %} #}
+						<li>
+						<div class="icon-wrap"><div class="icon">{% if how.icon %}<img src="{{ Image(how.icon).src }}">{% endif %}</div></div>
+						{% if how.copy %}<div class="copy">{{ how.copy | wpautop }}</div>{% endif %}
+					{% endfor %}
+				</ul>
+				{% endif %}
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+            {% endif %}
+
+			{% set team = post.meta('team') %}
+        	{% if team.display_block == 'yes' %}
+			<section class="home-team">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						{% if team.headline %}<h3 class="subhead">{{ team.headline }}</h3>{% endif %}
+					</div>
+					<div class="copy">
+						{% set columns = team.columns %}
+						{% if columns %}
+							{% for column in columns %}
+							<div class="column">
+								{{ column.column_content }}
+							</div>
+							{% endfor %}
+						{% endif %}
+						{# {% if team.copy %}{{  team.copy | wpautop }}{% endif %}
+						{% if team.image %}
+						<div class="image">
+							<img src="{{ Image(team.image).src }}">
+						</div>
+						{% endif %} #}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+            {% endif %}
+
+			{% set founder = post.meta('founder') %}
+        	{% if founder.display_block == 'yes' %}
+			<section class="home-founder">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						{% if founder.headline %}<h3 class="subhead">{{ founder.headline }}</h3>{% endif %}
+					</div>
+					<div class="founder-content">
+					{% if founder.copy %}
+						<div class="copy">
+						{{  founder.copy | wpautop }}
+						{% if founder.display_cta_btn == 'yes' %}
+						<div class="cta">
+        				{% if founder.display_cta_btn == 'yes' %}
+        				{% if founder.cta_button_type == 'button' %}{% if founder.cta_btn_text %}<a href="{{ founder.cta_btn_url }}" class="cta-button">{{ founder.cta_btn_text }}</a>{% endif %}{% endif %}
+        				{% if founder.cta_button_type == 'typeform' %}
+							{% if options.full_code != blank %}
+								{{ options.full_code }}
+							{% else %}
+								<a class="cta-button" {{ options.typeform_button }}>{{ founder.cta_btn_text }}</a>
+							{% endif %}
+						{% endif %}
+						{% endif %}
+						</div>
+						{% endif %}
+						</div>
+					{% endif %}
+					{% if founder.image %}
+					<div class="image">
+						<img src="{{ Image(founder.image).src }}">
+					</div>
+					{% endif %}
+					</div>
+				</div>
+				<div class="floaty-blob"></div>
+			</section>
+			{% endif %}
+
+			<section class="home-case-studies">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						{% set case_studies_subhead = post.meta('case_studies_subhead') %}
+						{% if case_studies_subhead %}<h3 class="h3">{{ case_studies_subhead }}</h3>{% endif %}
+					</div>
+
+				{% set cases = post.meta('featured_case_studies') %}
+				{% if cases %}
+					<div class="cases">
+							<ul>
+							{% for case in cases %}
+								<li>
+									{% if case.case_study.get_thumbnail %}<a href="{{ case.case_study.link }}"><img src="{{ case.case_study.thumbnail.src }}" alt="{{ case.case_study.title }} thumbnail"></a>{% endif %}
+									{# {% if case.icon %}<a href="{{ case.case_study.link }}"><img src="{{ Image(case.icon).src }}" alt="{{ case.case_study.title }} icon"></a>{% endif %} #}
+									{# <h4><a href="{{ case.case_study.link }}"><span class="label">Case Study </span> {{ case.case_study.title }} </a></h4> #}
+									<h4><a href="{{ case.case_study.link }}">{{ case.case_study.title }} </a></h4>
+									{# <a href="{{ case.case_study.link }}" class="more-link">Learn More</a></li> #}
+								</li>
+							{% endfor %}
+							</ul>
+					</div>
+				{% endif %}
+				{% set case_studies_cta = post.meta('case_studies_cta') %}
+
+				{% if case_studies_cta.display_cta_btn == 'yes' %}
+				<div class="cta">
+				{% if case_studies_cta.cta_btn_text %}<a href="{{ case_studies_cta.cta_btn_url }}" class="cta-button">{{ case_studies_cta.cta_btn_text }}</a>{% endif %}
+				</div>
+				{% endif %}
+				<div class="floaty-blob"></div>
+				</div>
+			</section>
+			
+			{% filter shortcodes %}
+				<section class="home-linkedin">
+					<div class="inner-wrap">
+						{{ post.meta('linkedin_code') }}
+					</div>
+				</section>
+			{% endfilter %}
+
+{#
+			<section class="footer-form">
+				<div class="inner-wrap">
+					<div class="section-intro">
+						<h3 class="subhead">{{ options.footer_form_headline }}</h3>
+						{% if options.footer_form_intro_text %}<p class="copy">{{ options.footer_form_intro_text }}</p>{% endif %}
+					</div>
+					<div class="form">
+						{% filter shortcodes %}
+						   {{ options.footer_form_shortcode }}
+						{% endfilter %}
+					</div>
+				</div>
+			</section> #}
+
+		</article>
+		{% if hero_block.cta_button_type == 'typeform' or services_sec.cta_button_type == 'typeform' or founder.cta_button_type == 'typeform' %}
+			{{ options.typeform_script_embed }}
+		{% endif %}
+
+		{% set code         = post.meta('sign_code') %}
+        {% set subheading   = post.meta('sign_subheading') %}
+        {% set heading      = post.meta('sign_heading') %}
+        {% set photo        = post.meta('sign_photo') %}
+
+        <section class="signup">
+            <div class="inner-wrap">
+                <div class="signup-content">
+                    <div class="signup-text">
+                        <p>{{ subheading }}</p>
+                        <h3>{{ heading }}</h3>
+                        {{ code }}
+                    </div>
+                    <div class="signup-photo">
+                        <img src="{{ photo.url }}" alt="{{ photo.alt }}">
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

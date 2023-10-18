@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    {% set photo    = post.meta('featured_image') %}
+    {% set heading  = post.meta('heading') %}
+    {% set content  = post.meta('content') %}
+    {% set code     = post.meta('code') %}
+
+	<article class="main-content page-audit page-thankyou-1" id="post-{{post.ID}}">
+        <section class="thank-you-but">
+            <div class="inner-wrap">
+                <div class="content-details">
+                    <div class="content-details__item content-details__photo">
+                        <img src="{{ photo['url'] }}" alt="{{ photo['alt'] }}">
+                    </div>
+                    <div class="content-details__item content-details__text">
+                        <h2>{{ heading }}</h2>
+                        {{ content }}
+                        {{ code }}
+                        <a href="{{ site.url }}" class="cta-button">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}
