@@ -1,583 +1,142 @@
-[18-Oct-2023 08:07:02 UTC] WordPress database error Table 'local.wp_cli_cookie_scan_cookies' doesn't exist for query DESCRIBE `wp_cli_cookie_scan_cookies` made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Table 'local.wp_cli_cookie_scan_cookies' doesn't exist for query SELECT COUNT(*) FROM wp_cli_cookie_scan_cookies made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] PHP Warning:  Undefined array key 0 in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/updraftplus/includes/class-search-replace.php on line 139
-[18-Oct-2023 08:07:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/updraftplus/includes/class-search-replace.php on line 139
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_action_meta' for query SELECT COUNT(*) FROM wp_nf3_action_meta USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_actions' for query SELECT COUNT(*) FROM wp_nf3_actions USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_chunks' for query SELECT COUNT(*) FROM wp_nf3_chunks USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_field_meta' for query SELECT COUNT(*) FROM wp_nf3_field_meta USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_fields' for query SELECT COUNT(*) FROM wp_nf3_fields USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_form_meta' for query SELECT COUNT(*) FROM wp_nf3_form_meta USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_forms' for query SELECT COUNT(*) FROM wp_nf3_forms USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_object_meta' for query SELECT COUNT(*) FROM wp_nf3_object_meta USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_objects' for query SELECT COUNT(*) FROM wp_nf3_objects USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:02 UTC] WordPress database error Key 'PRIMARY' doesn't exist in table 'wp_nf3_relationships' for query SELECT COUNT(*) FROM wp_nf3_relationships USE INDEX (PRIMARY) made by do_action('wp_ajax_updraft_ajaxrestore'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Admin->updraft_ajaxrestore, UpdraftPlus_Admin->prepare_restore, UpdraftPlus_Admin->restore_backup, Updraft_Restorer->perform_restore, Updraft_Restorer->restore_backup, Updraft_Restorer->restore_backup_db, Updraft_Restorer->prepare_create_table, Updraft_Restorer->restored_table, do_action('updraftplus_restored_db_table'), WP_Hook->do_action, WP_Hook->apply_filters, UpdraftPlus_Migrator_Lite->updraftplus_restored_db_table, UpdraftPlus_Search_Replace->icit_srdb_replacer
-[18-Oct-2023 08:07:19 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
+[22-Oct-2023 09:39:42 UTC] Autoloader included
+[22-Oct-2023 09:39:42 UTC] 1
+[22-Oct-2023 09:39:43 UTC] [ Timber ] Error loading your template files: page-homehome.twig, page.twig. Make sure one of these files exists.
+[22-Oct-2023 09:39:43 UTC] Autoloader included
+[22-Oct-2023 09:39:43 UTC] 1
+[22-Oct-2023 09:41:32 UTC] Autoloader included
+[22-Oct-2023 09:41:32 UTC] 1
+[22-Oct-2023 09:41:32 UTC] PHP Fatal error:  Uncaught Error: Class 'Timber' not found in /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php:33
 Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(36): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_ebde9475a1e449ee1d54277aab7642c4d87cc115a28b7bcbabd7261e5a4c7283->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page-home.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php(17): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:07:20 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
+#0 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
+#2 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
+#3 {main}
+  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php on line 33
+[22-Oct-2023 09:41:32 UTC] Autoloader included
+[22-Oct-2023 09:41:32 UTC] 1
+[22-Oct-2023 09:41:46 UTC] Autoloader included
+[22-Oct-2023 09:41:46 UTC] 1
+[22-Oct-2023 09:41:46 UTC] [ Timber ] Error loading your template files: page-home.twig, page.twig. Make sure one of these files exists.
+[22-Oct-2023 09:41:48 UTC] Autoloader included
+[22-Oct-2023 09:41:48 UTC] 1
+[22-Oct-2023 09:41:48 UTC] [ Timber ] Error loading your template files: page-home.twig, page.twig. Make sure one of these files exists.
+[22-Oct-2023 09:42:40 UTC] Autoloader included
+[22-Oct-2023 09:42:40 UTC] 1
+[22-Oct-2023 09:42:40 UTC] PHP Fatal error:  Uncaught Error: Class 'Timber' not found in /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/functions.php:26
 Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:07:22 UTC] Cron reschedule event error for hook: jetpack_sync_cron, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"jetpack_sync_interval","args":[],"interval":300}
-[18-Oct-2023 08:07:22 UTC] Cron reschedule event error for hook: jetpack_sync_full_cron, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"jetpack_sync_interval","args":[],"interval":300}
-[18-Oct-2023 08:07:23 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
+#0 /Users/akramtello/Local Sites/id/app/public/wp-settings.php(600): include()
+#1 /Users/akramtello/Local Sites/id/app/public/wp-config.php(105): require_once('/Users/akramtel...')
+#2 /Users/akramtello/Local Sites/id/app/public/wp-load.php(50): require_once('/Users/akramtel...')
+#3 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(13): require_once('/Users/akramtel...')
+#4 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
+#5 {main}
+  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/functions.php on line 26
+[22-Oct-2023 09:43:49 UTC] Autoloader included
+[22-Oct-2023 09:43:49 UTC] 1
+[22-Oct-2023 09:43:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Timber' not found in /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/functions.php:26
 Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:07:24 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
+#0 /Users/akramtello/Local Sites/id/app/public/wp-settings.php(600): include()
+#1 /Users/akramtello/Local Sites/id/app/public/wp-config.php(105): require_once('/Users/akramtel...')
+#2 /Users/akramtello/Local Sites/id/app/public/wp-load.php(50): require_once('/Users/akramtel...')
+#3 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(13): require_once('/Users/akramtel...')
+#4 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
+#5 {main}
+  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/functions.php on line 26
+[22-Oct-2023 09:44:09 UTC] Autoloader included
+[22-Oct-2023 09:44:09 UTC] 1
+[22-Oct-2023 09:44:09 UTC] [ Timber ] Error loading your template files: page-home.twig, page.twig. Make sure one of these files exists.
+[22-Oct-2023 09:44:09 UTC] Autoloader included
+[22-Oct-2023 09:44:09 UTC] 1
+[22-Oct-2023 09:44:55 UTC] Autoloader included
+[22-Oct-2023 09:44:55 UTC] 1
+[22-Oct-2023 09:44:55 UTC] [ Timber ] Error loading your template files: page-home.twig, page.twig. Make sure one of these files exists.
+[22-Oct-2023 09:44:55 UTC] Autoloader included
+[22-Oct-2023 09:44:55 UTC] 1
+[22-Oct-2023 09:44:56 UTC] Autoloader included
+[22-Oct-2023 09:44:56 UTC] 1
+[22-Oct-2023 09:44:56 UTC] [ Timber ] Error loading your template files: page-home.twig, page.twig. Make sure one of these files exists.
+[22-Oct-2023 09:44:58 UTC] Autoloader included
+[22-Oct-2023 09:44:58 UTC] 1
+[22-Oct-2023 09:44:58 UTC] Autoloader included
+[22-Oct-2023 09:44:58 UTC] 1
+[22-Oct-2023 09:44:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Timber' not found in /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/functions.php:29
 Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:07:36 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:07:36 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:07:39 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(36): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_ebde9475a1e449ee1d54277aab7642c4d87cc115a28b7bcbabd7261e5a4c7283->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page-home.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php(17): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:52:03 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:52:03 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:52:11 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:52:11 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 08:56:19 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(36): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_ebde9475a1e449ee1d54277aab7642c4d87cc115a28b7bcbabd7261e5a4c7283->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page-home.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php(17): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 09:00:45 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(36): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_ebde9475a1e449ee1d54277aab7642c4d87cc115a28b7bcbabd7261e5a4c7283->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page-home.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php(17): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 09:00:45 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 09:00:46 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(36): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_ebde9475a1e449ee1d54277aab7642c4d87cc115a28b7bcbabd7261e5a4c7283->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page-home.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php(17): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 09:00:47 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 09:00:47 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(36): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_ebde9475a1e449ee1d54277aab7642c4d87cc115a28b7bcbabd7261e5a4c7283->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page-home.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php(17): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 09:00:47 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(36): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_ebde9475a1e449ee1d54277aab7642c4d87cc115a28b7bcbabd7261e5a4c7283->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page-home.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php(17): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 09:00:47 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 09:00:48 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(36): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_ebde9475a1e449ee1d54277aab7642c4d87cc115a28b7bcbabd7261e5a4c7283->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page-home.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page-home.php(17): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
-[18-Oct-2023 09:00:48 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: Timber\Menu - null in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code:30
-Stack trace:
-#0 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_a94c173cd43f3874f87bc5a2b684713854eefed273fc502214c4e0c211ea20c6->doDisplay(Array, Array)
-#1 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#2 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(89): Twig\Template->display(Array)
-#3 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_1008883ca301d6a536e9717bf4457d24045eccc1af6c41f7a45d3e73183bc14a->doDisplay(Array, Array)
-#4 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#5 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(168): Twig\Template->display(Array)
-#6 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(214): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->block_footer(Array, Array)
-#7 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(88): Twig\Template->displayBlock('footer', Array, Array)
-#8 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_f9b5dfeec2ee65c34348fc68e72e229ab80cfa470660516977592802ad05d83e->doDisplay(Array, Array)
-#9 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#10 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code(35): Twig\Template->display(Array, Array)
-#11 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(453): __TwigTemplate_2cb76831634439ca0090e052fe9a9a12e18ed0af359956a268a93525f4ada969->doDisplay(Array, Array)
-#12 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(420): Twig\Template->displayWithErrorHandling(Array, Array)
-#13 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Template.php(432): Twig\Template->display(Array)
-#14 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/TemplateWrapper.php(47): Twig\Template->render(Array, Array)
-#15 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Loader.php(79): Twig\TemplateWrapper->render(Array)
-#16 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(334): Timber\Loader->render('page.twig', Array, false, 'default')
-#17 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(383): Timber\Timber::compile(Array, Array, false, 'default', true)
-#18 /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/lib/Timber.php(410): Timber\Timber::fetch(Array, Array, false, 'default')
-#19 /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/page.php(28): Timber\Timber::render(Array, Array)
-#20 /Users/akramtello/Local Sites/id/app/public/wp-includes/template-loader.php(106): include('/Users/akramtel...')
-#21 /Users/akramtello/Local Sites/id/app/public/wp-blog-header.php(19): require_once('/Users/akramtel...')
-#22 /Users/akramtello/Local Sites/id/app/public/index.php(17): require('/Users/akramtel...')
-#23 {main}
-  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/plugins/timber-library/vendor/twig/twig/src/Environment.php(497) : eval()'d code on line 30
+#0 /Users/akramtello/Local Sites/id/app/public/wp-includes/class-wp-hook.php(310): {closure}('')
+#1 /Users/akramtello/Local Sites/id/app/public/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/akramtello/Local Sites/id/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/akramtello/Local Sites/id/app/public/wp-admin/admin-header.php(303): do_action('admin_notices')
+#4 /Users/akramtello/Local Sites/id/app/public/wp-admin/index.php(137): require_once('/Users/akramtel...')
+#5 {main}
+  thrown in /Users/akramtello/Local Sites/id/app/public/wp-content/themes/id/functions.php on line 29
+[22-Oct-2023 09:47:57 UTC] Autoloader included
+[22-Oct-2023 09:47:57 UTC] 1
+[22-Oct-2023 09:47:57 UTC] Autoloader included
+[22-Oct-2023 09:47:57 UTC] 1
+[22-Oct-2023 09:47:59 UTC] Autoloader included
+[22-Oct-2023 09:47:59 UTC] 1
+[22-Oct-2023 09:48:00 UTC] Autoloader included
+[22-Oct-2023 09:48:00 UTC] 1
+[22-Oct-2023 09:49:00 UTC] Autoloader included
+[22-Oct-2023 09:49:00 UTC] 1
+[22-Oct-2023 09:49:01 UTC] Autoloader included
+[22-Oct-2023 09:49:01 UTC] 1
+[22-Oct-2023 09:51:00 UTC] Autoloader included
+[22-Oct-2023 09:51:00 UTC] 1
+[22-Oct-2023 09:51:01 UTC] Autoloader included
+[22-Oct-2023 09:51:01 UTC] 1
+[22-Oct-2023 09:53:00 UTC] Autoloader included
+[22-Oct-2023 09:53:00 UTC] 1
+[22-Oct-2023 09:53:01 UTC] Autoloader included
+[22-Oct-2023 09:53:01 UTC] 1
+[22-Oct-2023 09:55:01 UTC] Autoloader included
+[22-Oct-2023 09:55:01 UTC] 1
+[22-Oct-2023 09:55:01 UTC] Autoloader included
+[22-Oct-2023 09:55:01 UTC] 1
+[22-Oct-2023 09:57:00 UTC] Autoloader included
+[22-Oct-2023 09:57:00 UTC] 1
+[22-Oct-2023 09:57:01 UTC] Autoloader included
+[22-Oct-2023 09:57:01 UTC] 1
+[22-Oct-2023 09:59:01 UTC] Autoloader included
+[22-Oct-2023 09:59:01 UTC] 1
+[22-Oct-2023 09:59:02 UTC] Autoloader included
+[22-Oct-2023 09:59:02 UTC] 1
+[22-Oct-2023 10:01:01 UTC] Autoloader included
+[22-Oct-2023 10:01:01 UTC] 1
+[22-Oct-2023 10:01:02 UTC] Autoloader included
+[22-Oct-2023 10:01:02 UTC] 1
+[22-Oct-2023 10:03:01 UTC] Autoloader included
+[22-Oct-2023 10:03:01 UTC] 1
+[22-Oct-2023 10:03:02 UTC] Autoloader included
+[22-Oct-2023 10:03:02 UTC] 1
+[22-Oct-2023 10:05:01 UTC] Autoloader included
+[22-Oct-2023 10:05:01 UTC] 1
+[22-Oct-2023 10:05:02 UTC] Autoloader included
+[22-Oct-2023 10:05:02 UTC] 1
+[22-Oct-2023 10:07:01 UTC] Autoloader included
+[22-Oct-2023 10:07:01 UTC] 1
+[22-Oct-2023 10:07:02 UTC] Autoloader included
+[22-Oct-2023 10:07:02 UTC] 1
+[22-Oct-2023 10:09:01 UTC] Autoloader included
+[22-Oct-2023 10:09:01 UTC] 1
+[22-Oct-2023 10:09:02 UTC] Autoloader included
+[22-Oct-2023 10:09:02 UTC] 1
+[22-Oct-2023 10:11:02 UTC] Autoloader included
+[22-Oct-2023 10:11:02 UTC] 1
+[22-Oct-2023 10:11:03 UTC] Autoloader included
+[22-Oct-2023 10:11:03 UTC] 1
+[22-Oct-2023 10:13:02 UTC] Autoloader included
+[22-Oct-2023 10:13:02 UTC] 1
+[22-Oct-2023 10:13:03 UTC] Autoloader included
+[22-Oct-2023 10:13:03 UTC] 1
+[22-Oct-2023 10:15:03 UTC] Autoloader included
+[22-Oct-2023 10:15:03 UTC] 1
+[22-Oct-2023 10:15:03 UTC] Autoloader included
+[22-Oct-2023 10:15:03 UTC] 1
+[22-Oct-2023 10:17:03 UTC] Autoloader included
+[22-Oct-2023 10:17:03 UTC] 1
+[22-Oct-2023 10:17:04 UTC] Autoloader included
+[22-Oct-2023 10:17:04 UTC] 1
+[22-Oct-2023 10:19:03 UTC] Autoloader included
+[22-Oct-2023 10:19:03 UTC] 1
+[22-Oct-2023 10:19:04 UTC] Autoloader included
+[22-Oct-2023 10:19:04 UTC] 1

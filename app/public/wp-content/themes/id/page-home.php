@@ -7,11 +7,26 @@
  * @since    Timber 0.1
  */
 
-$context = Timber::context();
+// Get the global context
+$context = \Timber\Timber::context();
 
-$timber_post     = new Timber\Post();
+// Get the current post
+$timber_post = \Timber\Timber::get_post(); 
 $context['post'] = $timber_post;
 $context['options'] = get_fields('option');
-$context['cases'] = Timber::get_posts('post_type=case-studies');
-// $context['cases'] = Timber::get_posts('post_type=case-studies');
-Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
+
+
+// Get other posts
+$args1 = array(
+    'post_type' => 'post',
+);
+$context['posts'] = \Timber\Timber::get_posts($args1);
+
+// Get case studies
+$args2 = array(
+    'post_type' => 'case-studies',
+);
+$context['cases'] = \Timber\Timber::get_posts($args2);
+
+// Render the view
+\Timber\Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);
